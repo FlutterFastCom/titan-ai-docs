@@ -1,0 +1,5 @@
+# Copy to .codex/config.toml (git-ignored) or ~/.codex/config.toml.
+# The key is read from the TITAN_API_KEY environment variable; never paste it here.
+[mcp_servers.titan]
+url = "https://YOUR-TITAN-BACKEND/mcp"
+bearer_token_env_var = "TITAN_API_KEY"

@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "titan": {
+      "type": "http",
+      "url": "${TITAN_MCP_URL}",
+      "headers": { "Authorization": "Bearer ${TITAN_API_KEY}" }
+    }
+  }
+}
