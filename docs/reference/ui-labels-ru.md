@@ -17,9 +17,7 @@ exactly as written. A label not listed here: describe where it is instead of tra
 |---|---|
 | Add device | Добавить устройство |
 | Admin Runs | Admin запуски |
-| Agent registered — currently offline | ПК Агент зарегистрирован — сейчас не в сети |
 | AI Adapters | AI адаптеры |
-| API keys | API-ключи |
 | Apple Mobile Device Service | Служба мобильных устройств Apple |
 | Apply | Применить |
 | Auto | Автоматически |
@@ -43,11 +41,12 @@ exactly as written. A label not listed here: describe where it is instead of tra
 | Host dependency status is being updated. | Статус зависимостей хоста обновляется. |
 | Host dependency status is checking. | Статус зависимостей хоста проверяется. |
 | Host dependency status is unavailable. | Статус зависимостей хоста недоступен. |
-| Host Deps | Зависимости |
+| Host Deps | Зависимости / Зависимости хоста |
 | Install | Установить |
 | Language | Язык |
 | LLM Templates | LLM шаблоны |
 | Log out | Выйти |
+| MCP API keys | MCP API-ключи |
 | My Runs | Мои запуски |
 | open | открыть |
 | PC Agent | ПК Агент |
