@@ -112,13 +112,13 @@ audience: both
 - flags: changes data
 
 ## add_shares
-- does: add shares: bulk strategy-level recipients (userIds, no release selector); recipients may run every eligible sealed release, selected by releaseId. Caller rights and exact pins apply. Ordinary keys stay actual-root-owner scoped; a current granted administrator has owner-equivalent strategy rights on any owner's strategy through a session, API key or MCP, recorded as the real actor.
+- does: add shares: confirm selected UUID recipients (userIds only, no release selector); nickname discovery never selects a write target. Acknowledgement keeps sorted userIds and matching recipients with transaction-observed nicknames. Recipients may run every eligible sealed release, selected by releaseId. Caller rights and exact pins apply. Ordinary keys stay actual-root-owner scoped; a current granted administrator has owner-equivalent strategy rights on any owner's strategy through a session, API key or MCP, recorded as the real actor.
 - input: path { strategy_id: string } · body AddSharesRequest { userIds: string[] }
 - returns: ShareMutationResponse
 - flags: changes data
 
 ## remove_shares
-- does: Destructive: remove shares: bulk strategy-level recipient removal (userIds, no release selector); admitted runs keep captured evidence. Caller rights and exact pins apply. Ordinary keys stay actual-root-owner scoped; a current granted administrator has owner-equivalent strategy rights on any owner's strategy through a session, API key or MCP, recorded as the real actor.
+- does: Destructive: remove shares: confirm selected UUID recipients for bulk strategy-level removal (userIds only, no release selector); acknowledgement keeps sorted userIds and matching recipients with transaction-observed nicknames even for already-absent shares. Admitted runs keep captured evidence. Caller rights and exact pins apply. Ordinary keys stay actual-root-owner scoped; a current granted administrator has owner-equivalent strategy rights on any owner's strategy through a session, API key or MCP, recorded as the real actor.
 - input: path { strategy_id: string } · body RemoveSharesRequest { userIds: string[] }
 - returns: ShareMutationResponse
 - flags: changes data · destructive: confirm with the user first
@@ -160,8 +160,8 @@ audience: both
 - flags: read-only
 
 ## list_shares
-- does: list shares: the strategy-level recipients. Caller rights and exact pins apply. Ordinary keys stay actual-root-owner scoped; a current granted administrator has owner-equivalent strategy rights on any owner's strategy through a session, API key or MCP, recorded as the real actor.
-- input: path { strategy_id: string } · query { page?: integer; size?: integer; search?: string; lookupUserId?: string }
+- does: list shares: current strategy recipients with nicknames; search narrows by full UUID exact or literal case-insensitive nickname substring. Legacy lookupUserId returns zero/one identity without paging. lookup discovers nickname/full-UUID candidates in UUID-ascending CP7A pages (default 1/25, max 100), with alreadyGranted/canShare against this strategy and its actual owner. Modes are exclusive; terms are trimmed, max 64 scalars, no NUL. Observations grant no reservation: confirm picked UUIDs on writes so rename/reclaim cannot redirect recipients. Caller rights and exact pins apply. Ordinary keys stay actual-root-owner scoped; a current granted administrator has owner-equivalent strategy rights on any owner's strategy through a session, API key or MCP, recorded as the real actor.
+- input: path { strategy_id: string } · query { page?: integer; size?: integer; search?: string; lookup?: string; lookupUserId?: string }
 - returns: ShareReadResponse
 - flags: read-only
 
