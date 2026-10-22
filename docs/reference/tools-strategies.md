@@ -16,7 +16,7 @@ audience: both
 - flags: read-only
 
 ## list_strategy_owners
-- does: List paged distinct owner user IDs from strategies visible under your current rights: mine, shared and all current public for ordinary callers; global strategy owners for current admins. Exact full owner-ID search only, no user/profile enumeration. Read permission requires granted access, not author capability.
+- does: List paged distinct {ownerUserId,ownerNickname} options from strategies visible under your current rights: mine, shared and all current public for ordinary callers; global strategy owners for current admins. Search trims whitespace: blank applies no search, a full hyphenated UUID matches exactly, otherwise a case-insensitive literal nickname substring narrows the visible set (at most 64 Unicode characters, no NUL). Use the selected ownerUserId in ownerIds; labels do not replace UUID selection or create a general user directory or email/profile lookup. Read permission requires granted access, not author capability.
 - input: query { page?: integer; size?: integer; includeArchived?: boolean; search?: string }
 - returns: PaginatedResponse_StrategyOwnerOptionResponse
 - flags: read-only
