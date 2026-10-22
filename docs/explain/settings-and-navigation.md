@@ -7,13 +7,17 @@ sources:
   - fe:src/pages/dashboard/DashboardPage.tsx
   - fe:src/widgets/AppSidebar/libs/constants/nav-items.constants.ts
   - fe:src/shared/i18n/locales/en/common.json
+  - fe:src/shared/i18n/locales/ru/common.json
   - fe:src/shared/i18n/libs/constants/languages.constants.ts
 verified_fe: a93e3f30
 ---
 # Settings and where things are in the Titan web app
 
+The web app is at https://app.titan.red (sign in with email and password).
+
 None of these settings can be changed through your tools. Tell the user exactly where to click, using the labels below
-(these are the English labels; in Russian the same items sit in the same places).
+(these are the English labels; in Russian the same items sit in the same places — their Russian names are in
+`reference/ui-labels-ru.md`).
 
 ## The left menu
 | menu group | item | what the user does there |
@@ -49,7 +53,7 @@ changed yet; do not suggest workarounds.
 
 ## Change the language
 Say: "Open **Settings → Language**, pick English or Russian." The change applies to the web app only; you keep answering
-in the language the user writes in.
+in the language the user writes in. Russian names of every menu and button: `reference/ui-labels-ru.md`.
 
 ## Create an API key (needed to connect an AI like you)
 Say:

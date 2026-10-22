@@ -2,7 +2,7 @@
   "mcpServers": {
     "titan": {
       "type": "http",
-      "url": "${TITAN_MCP_URL}",
+      "url": "${TITAN_MCP_URL:-https://backend-production-585b.up.railway.app/mcp}",
       "headers": { "Authorization": "Bearer ${TITAN_API_KEY}" }
     }
   }
