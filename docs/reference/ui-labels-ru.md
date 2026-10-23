@@ -43,6 +43,7 @@ exactly as written. A label not listed here: describe where it is instead of tra
 | Host dependency status is unavailable. | Статус зависимостей хоста недоступен. |
 | Host Deps | Зависимости / Зависимости хоста |
 | Install | Установить |
+| Invites | Приглашения |
 | Language | Язык |
 | LLM Templates | LLM шаблоны |
 | Log out | Выйти |
