@@ -4,7 +4,7 @@ generated: true
 audience: both
 ---
 
-# Tools — devices (5)
+# Tools — devices (4)
 
 > Generated from the Titan code — do not edit by hand. For the assistant only: never show tool names, arguments or codes to the user.
 
@@ -32,9 +32,3 @@ audience: both
 - input: path { device_id: string }
 - returns: DeviceDto
 - flags: read-only
-
-## recover_device_cleanup
-- does: Destructive: explicitly remove TikTok and its local app data from one owned idle phone whose worker is blocked by a pending cleanup; device_id is the UDID, not numeric rowId. Body {"confirmation":"remove_tiktok"}. Refused while a run or chat is live or another recovery is in flight. Success (cleared or notNeeded) only after a fresh inventory shows TikTok absent and the hold clear is acknowledged; it does not resume a paused queue or retry the failed account. Never call it in the background or as automatic retry. After unavailable, uncertain or a timeout, read the device and worker state before any new attempt; do not blindly resend.
-- input: path { device_id: string } · body CleanupRecoveryRequest { confirmation: CleanupRecoveryConfirmationRequest }
-- returns: CleanupRecoveryResponse
-- flags: changes data · destructive: confirm with the user first

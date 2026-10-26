@@ -31,7 +31,6 @@ Plain meanings and fixes live in docs/explain/errors.md. This table only says wh
 | auth_profile_unavailable | delete_queue_drafts (503), create_empty_queue_draft (503), get_queue_draft_create_receipt (503), edit_queue_draft (503), get_queue_draft_edit_receipt (503), clone_queue_as_draft (503), get_queue_draft_clone_receipt (503), list_queue_draft_argument_options (503), list_queue_draft_driver_options (503), list_queue_draft_device_options (503), get_queue_draft (503), list_queue_draft_workers (503), … (23) |
 | automatic_recovery |  |
 | chat_conflict |  |
-| cleanup_pending |  |
 | device_not_found | create_empty_queue_draft (404), edit_queue_draft (404), clone_queue_as_draft (404), get_queue_draft (404), get_queue_draft_defaults (404), list_queue_draft_items (404), finalize_queue_draft (404), start_queue (404) |
 | device_trust_pending |  |
 | host_dep_missing |  |
