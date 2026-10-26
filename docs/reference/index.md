@@ -9,11 +9,12 @@ audience: both
 > Generated from the Titan code — do not edit by hand. For the assistant only: never show tool names, arguments or codes to the user.
 
 
-171 tools in 20 groups.
+173 tools in 21 groups.
 
 
 | group | tools | file |
 |---|---|---|
+| ai-usage | 2 | tools-ai-usage.md |
 | bundle-catalog | 9 | tools-bundle-catalog.md |
 | device-media | 2 | tools-device-media.md |
 | devices | 4 | tools-devices.md |
