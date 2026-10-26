@@ -9,6 +9,8 @@ verified_be: 92a0a9c1
 ---
 # Strategy recipes — pick the closest, never invent
 
+INTERNAL NOTES for building strategies. Never say "proven"/"unproven"/"not tested" to a customer who is RUNNING an existing ready strategy: judge that by its own recent runs (read them with the run tools) and say what they show.
+
 PROVEN = it ran green on a real iPhone at least once in the recorded shape. It does NOT mean reliable on every phone.
 UNPROVEN = the design exists but no complete green run was recorded: tell the user, then test on one phone first.
 
@@ -19,8 +21,8 @@ UNPROVEN = the design exists but no complete green run was recorded: tell the us
 | reset the phone's network settings and wait for it to come back | `recipes/network-reset.md` | PROVEN |
 | connect the phone's VPN to a location | `recipes/vpn-connect.md` | PROVEN (ExpressVPN only) |
 | remove TikTok and install it fresh | `recipes/reinstall-tiktok.md` | parts PROVEN separately |
-| the full cycle: reset → VPN → install → login → post → clean up | `recipes/full-cycle.md` | UNPROVEN end to end |
-| post from many accounts, one after another | `recipes/many-accounts.md` | UNPROVEN |
+| the full cycle: reset → VPN → install → login → post → clean up | `recipes/full-cycle.md` | PROVEN end to end (2 green runs, 2026-10-24) |
+| post from many accounts, one after another | `recipes/many-accounts.md` | PROVEN per run (2 accounts green, 2026-10-24); long batch unrecorded |
 | repeat with pauses | `recipes/repeat-with-pauses.md` | mechanism confirmed |
 
 How recipes are built: small sub-strategies (one job each, each with its own AI steps and tools), released, then
@@ -28,4 +30,4 @@ called in order by a parent strategy with `call` steps. Build and release the ch
 exists with `list_tools` before using it.
 
 Something the user wants that no recipe covers (text overlays on photos, Instagram, another VPN app, a calendar
-schedule): say it is not proven or not available, offer the closest recipe, and test on one phone before anything else.
+schedule): tell the strategy builder (not a customer running a ready strategy) it is not proven or not available, offer the closest recipe, and test on one phone before anything else.

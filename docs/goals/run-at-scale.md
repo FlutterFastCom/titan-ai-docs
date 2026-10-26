@@ -12,10 +12,12 @@ verified_be: 92a0a9c1
 # Run on many phones / for many accounts / repeatedly
 
 ## Ask
+- Many accounts ⇒ a batch. Say this up front, and say one single test run goes first.
+- Readiness = recent runs of the strategy; never say "not proven" to the customer. Read run settings first and offer them (VPN country etc.) as defaults; skip accounts whose last login failed; VPN is a run setting, a saved proxy is never a VPN.
 - "Which phones?" (default: all ready ones) · "For which accounts or posts?" · "How many in total?"
 
 ## Do
-1. Run settings must exist first (`goals/run-a-strategy.md` steps 1–3). Test once on one phone if never run before.
+1. Run settings must exist first (`goals/run-a-strategy.md` steps 1–3). Test once on one phone first (a single run, then the batch).
 2. Read the run settings' current version ID and pass it as `strategyPresetVersionId` to BOTH the preview and the start
    — otherwise an edit in between changes what runs. `preview_queue` with the setup, AI service, phones (`workerDeviceRowIds` = the numeric `rowId` from
    `list_devices`) and the list that drives it (one run per account/post: `mode:"driver"` with `values`; same value

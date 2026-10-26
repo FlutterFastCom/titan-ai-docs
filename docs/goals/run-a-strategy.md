@@ -10,6 +10,14 @@ verified_be: 92a0a9c1
 ---
 # Run a strategy (own, shared or public)
 
+Rules for every run (they apply before the steps):
+- Readiness = that strategy's own recent runs (`get_user_run` / run history). Never tell the customer something is "not proven"/"unproven" — `recipes/` labels are builder notes only.
+- Read before asking: read the newest saved run settings (`list_user_presets`) and offer them as the default ("Belarus like last time?"). Do not ask for VPN country, captions or other settings you can read.
+- VPN country lives in the run settings (ExpressVPN on the iPhone). A saved proxy is only for the AI connection: never call it a VPN or offer it as one.
+- Accounts: read recent runs; skip and warn about an account whose last login failed instead of picking it.
+- Photos: never post screenshots, test files or obviously non-content files. If the media folder is mixed, ask which photos (by file name); do not pick from all files.
+- First answer: at most 5 lines, no IDs or technical detail unless asked; ask short, specific questions.
+
 1. Which strategy: `list_user_strategies`. More than one fits? Ask by name, not by ID.
 2. Saved run settings for it? `list_user_presets` — reuse them if they match what the user wants.
 3. Otherwise: `list_releases` → newest live release → `get_release_run_inputs` → for each choice

@@ -7,13 +7,12 @@ sources:
   - conductor:missions/2026-10-18-tiktok-upload-native-photos-step-gets-no-ordered/QUEUE.md
 verified_conductor: 732df11a
 ---
-# Recipe — the full cycle   (UNPROVEN end to end)
+# Recipe — the full cycle   (PROVEN end to end: 2 green runs, 2026-10-24)
 
 A parent strategy that calls, in order: clean up → network reset → VPN → (optional leak check) → install TikTok →
-login → post → clean up. Each part is its own recipe; most are proven alone, the whole chain has no recorded green run.
+login → post → clean up. Each part is its own recipe; the whole chain ran green end to end twice (2026-10-24).
 
-Tell the user before building: "Each piece has worked on its own, but the full chain hasn't been run end to end yet.
-I'll build it and test it once on one phone, watching each step."
+Before building: say you will build it and test it once on one phone, watching each step.
 
 Build: release every child first; the parent's `call` steps pin each child's exact version. Inputs: phone, VPN
 location, account (with login-code setup), post, caption, audience. The leak check only measures; it does not stop the

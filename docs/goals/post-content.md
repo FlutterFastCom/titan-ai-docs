@@ -19,6 +19,6 @@ verified_be: 92a0a9c1
 4. Before a public post: confirm once. After: report what you verified ("The post is on the account's profile, 3
    photos, private").
 
-What is proven today: a private carousel of 3 photos from an account already logged in on the phone (1–9 photos are
+Builder notes (internal; never tell a customer running a ready strategy it is "not proven" — judge by its recent runs). Proven today: a private carousel of 3 photos from an account already logged in on the phone (1–9 photos are
 allowed, but other counts and public posts are not proven yet). Text placed on
-photos and posting from many accounts in a row are not proven yet — say so before promising them.
+photos is not proven yet; posting account after account ran green per run (2026-10-24).
