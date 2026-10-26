@@ -16,13 +16,13 @@ audience: both
 - flags: read-only
 
 ## get_user_run_chat
-- does: Read one run chat you ran. transcript=full: you wholly own the strategy source, and chatSetup/adapterSnapshot/argInvocation are raw retained values that can include your own stored credentials. transcript=unavailable: another author's source; only the safe outcome remains. Use read_run_transcript for the complete bounded transcript.
+- does: Read one run chat you ran. transcript=full: you wholly own the strategy source, and chatSetup/adapterSnapshot/argInvocation are retained values; stored passwords and email codes are replaced with [redacted]. transcript=unavailable: another author's source; only the safe outcome remains. Use read_run_transcript for the complete bounded transcript.
 - input: path { chat_id: string }
 - returns: ChatDetailResponse
 - flags: read-only
 
 ## list_user_run_chat_messages
-- does: List messages of a run chat you ran. With transcript=full, prompts, replies and raw tool arguments/results are retained values that can include your own stored credentials; transcript=unavailable returns only safe rows. A large row page can exceed a byte bound: use read_run_transcript instead.
+- does: List messages of a run chat you ran. With transcript=full, prompts, replies and tool arguments/results are retained values with stored passwords and email codes replaced with [redacted]; transcript=unavailable returns only safe rows. A large row page can exceed a byte bound: use read_run_transcript instead.
 - input: path { chat_id: string } · query { page?: integer; size?: integer; orderBy?: string; orderDirection?: string }
 - returns: RunChatMessagesPageResponse
 - flags: read-only
@@ -34,7 +34,7 @@ audience: both
 - flags: read-only
 
 ## read_run_transcript
-- does: Read the complete retained transcript of a run chat you ran, in resumable fragments: the setup record first, then each message by messageId; offset counts Unicode scalars. Concatenate fragments of one kind/messageId by offset; pass nextCursor until it is null. Pages fit query.size and query.maxBytes. transcript=unavailable means the strategy source is not wholly yours: do not debug that author's prompts. Raw retained values can include your own stored credentials. Screenshots are referenced, never inline: use get_user_message_screenshot. transcript_changed means start again without a cursor.
+- does: Read the complete retained transcript of a run chat you ran, in resumable fragments: the setup record first, then each message by messageId; offset counts Unicode scalars. Concatenate fragments of one kind/messageId by offset; pass nextCursor until it is null. Pages fit query.size and query.maxBytes. transcript=unavailable means the strategy source is not wholly yours: do not debug that author's prompts. Stored passwords and email codes are replaced with [redacted]. Screenshots are referenced, never inline: use get_user_message_screenshot. transcript_changed means start again without a cursor.
 - input: path { chat_id: string } · query { cursor?: string; size?: integer; maxBytes?: integer }
 - returns: RunTranscriptPageResponse
 - flags: read-only · returns a stored credential: never repeat it to anyone
@@ -52,7 +52,7 @@ audience: both
 - flags: read-only
 
 ## get_user_run
-- does: Read one run you ran with its outcome, failureClass and transcript availability (full when you wholly own the strategy source; unavailable otherwise). Full views can include your own stored credentials in retained values.
+- does: Read one run you ran with its outcome, failureClass and transcript availability (full when you wholly own the strategy source; unavailable otherwise). Full views show retained values; run chats replace stored passwords and email codes with [redacted].
 - input: path { run_id: string }
 - returns: UserRunDetailResponse
 - flags: read-only
@@ -70,7 +70,7 @@ audience: both
 - flags: read-only
 
 ## list_user_run_steps
-- does: List the attempts/steps of a run you ran with their run chats. With transcript=full, retained values can include your own stored credentials; read each chat with read_run_transcript.
+- does: List the attempts/steps of a run you ran with their run chats. With transcript=full, retained values are shown and run chats replace stored passwords and email codes with [redacted]; read each chat with read_run_transcript.
 - input: path { run_id: string } · query { page?: integer; size?: integer; search?: string; status?: RunStepStatusFilter; statuses?: string }
 - returns: UserRunStepsPageResponse
 - flags: read-only
