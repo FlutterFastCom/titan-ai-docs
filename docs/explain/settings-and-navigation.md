@@ -48,7 +48,7 @@ Administrators also see a Dev Tools group (Playground, LLM Templates). Never sen
 | Encoder → Uniquization tier | how strongly videos are made unique before posting: Metadata only, Standard, TikTok Max, TikTok Max + Overlay |
 | System | app and service versions |
 
-Some sections may show "Save disabled — Titan Cloud cannot save this setting yet". Tell the user that setting cannot be
+Some sections may show "Save disabled — Titan cannot save this setting yet". Tell the user that setting cannot be
 changed yet; do not suggest workarounds.
 
 ## Change the language

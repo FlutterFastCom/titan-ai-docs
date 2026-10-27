@@ -75,7 +75,7 @@ exactly as written. A label not listed here: describe where it is instead of tra
 | Start | Запустить |
 | Strategies | Стратегии |
 | System | Система |
-| Titan navigation | Навигация Titan Cloud |
+| Titan navigation | Навигация Titan |
 | Trust | Доверие |
 | User | Пользователь |
 | WiFi | Wi‑Fi |
