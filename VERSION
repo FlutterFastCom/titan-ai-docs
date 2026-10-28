@@ -1,3 +1,3 @@
-backend=0.15.1
-frontend=0.14.14
-agent=0.5.16
+backend=0.16.0
+frontend=0.15.0
+agent=0.6.0
