@@ -96,10 +96,10 @@ Plain meanings and fixes live in docs/explain/errors.md. This table only says wh
 | run_queue_worker_cap_exceeded | add_queue_draft_workers (409) |
 | run_queue_worker_cooldown_conflict | bypass_queue_worker_cooldown (409) |
 | run_queue_worker_device_unavailable | add_queue_draft_workers (409) |
-| run_queue_worker_in_use | create_queue_draft (409), create_empty_queue_draft (409), edit_queue_draft (409), clone_queue_as_draft (409), add_queue_draft_workers (409), finalize_queue_draft (409), start_queue (409) |
+| run_queue_worker_in_use | create_queue_draft (409), create_empty_queue_draft (409), edit_queue_draft (409), clone_queue_as_draft (409), add_queue_draft_workers (409), finalize_queue_draft (409), start_queue (409), resume_queue (409) |
 | run_queue_worker_not_found | pause_queue_worker (404), resume_queue_worker (404), bypass_queue_worker_cooldown (404) |
 | run_queue_worker_status_conflict | pause_queue_worker (409), resume_queue_worker (409) |
-| run_queue_worker_unavailable | requeue_queue_item (409) |
+| run_queue_worker_unavailable | resume_queue (409), requeue_queue_item (409) |
 | screen_asleep |  |
 | snapshot_missing |  |
 | snapshot_stale |  |

@@ -45,14 +45,14 @@ audience: both
 - refusals: 400: run_queue_invalid_request · 404: run_queue_not_found · 409: run_queue_is_draft, run_queue_status_conflict, run_queue_busy
 
 ## resume_queue
-- does: Resume a paused queue to active scheduling. Work interrupted by a prior hard pause is not restored.
+- does: Resume a paused or waiting queue to active scheduling. A paused queue keeps its existing memberships; a waiting queue atomically reacquires its complete original released pool and refuses with run_queue_worker_unavailable (409) when that pool or a scheduled assignment is unusable, or run_queue_worker_in_use (409) when another queue holds one of its phones; either refusal leaves it waiting with its phones released. Work interrupted by a prior hard pause is not restored.
 - input: path { queue_id: string }
 - returns: RunQueueLiveActionResponse
 - flags: changes data · destructive: confirm with the user first
-- refusals: 400: run_queue_invalid_request · 404: run_queue_not_found · 409: run_queue_is_draft, run_queue_status_conflict, run_queue_busy
+- refusals: 400: run_queue_invalid_request · 404: run_queue_not_found · 409: run_queue_is_draft, run_queue_status_conflict, run_queue_worker_unavailable, run_queue_worker_in_use, run_queue_busy
 
 ## stop_queue
-- does: Destructive: terminally stop a ready, active or paused queue. Outstanding scheduled/running work is retired; succeeded history remains. The queue cannot be resumed.
+- does: Destructive: terminally stop a ready, active, paused or waiting queue. Outstanding scheduled/running work is retired; succeeded history remains. The queue cannot be resumed.
 - input: path { queue_id: string }
 - returns: RunQueueLiveActionResponse
 - flags: changes data · destructive: confirm with the user first
@@ -66,7 +66,7 @@ audience: both
 - refusals: 401: auth_missing_token, auth_malformed_token, auth_invalid_token, auth_expired_token, auth_not_configured · 403: access_not_granted · 404: run_queue_not_found, run_queue_item_not_found · 409: run_queue_is_draft, run_queue_status_conflict, run_queue_item_not_cancellable, run_queue_item_changed, run_queue_busy · 410: run_queue_deleted · 413: payload_too_large · 503: run_queue_unavailable
 
 ## requeue_queue_item
-- does: Requeue an eligible retired failed or cancelled live item (`list_queue_items` shows `canRequeue`), including a terminal linked run; use this broader recovery for cases outside the narrow proxy-unavailable/no-run path. Copy `claimGeneration` to request `expectedClaimGeneration` and `scheduleVersion` to `expectedScheduleVersion`, preserving explicit `null`. This may reopen a completed queue to ready or active and permit work to resume.
+- does: Requeue an eligible retired failed or cancelled live item (`list_queue_items` shows `canRequeue`), including a terminal linked run; use this broader recovery for cases outside the narrow proxy-unavailable/no-run path. Copy `claimGeneration` to request `expectedClaimGeneration` and `scheduleVersion` to `expectedScheduleVersion`, preserving explicit `null`. Requeue only schedules: a completed queue becomes waiting with all phones free and a waiting queue stays waiting. It never starts or resumes a queue and never acquires a phone; call resume_queue for a waiting queue, or start_queue for a ready one.
 - input: path { queue_id: string; item_id: string } · body LiveItemRequeueRequest { expectedClaimGeneration: string; expectedScheduleVersion: string|null }
 - returns: LiveItemRequeueResponse
 - flags: changes data · destructive: confirm with the user first

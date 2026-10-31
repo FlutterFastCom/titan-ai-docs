@@ -16,7 +16,7 @@ audience: both
 - flags: read-only
 
 ## list_queues
-- does: List the owner's run queues.
+- does: List the owner's run queues. Status may be draft, ready, active, paused, completed, stopped, or waiting; a waiting queue has requeued work with every phone released until an explicit resume_queue.
 - input: query { page?: integer; size?: integer; status?: string; search?: string; orderBy?: string; orderDirection?: string; strategyId?: string }
 - returns: PaginatedResponse_RunQueueListItemResponse
 - flags: read-only
@@ -53,7 +53,7 @@ audience: both
 - flags: changes data · destructive: confirm with the user first
 
 ## reenqueue_queue_item
-- does: For an owned item retired with `proxy_unavailable` and no linked run, probe its effective proxy and schedule it after recovery; a separate repair call is not required. Use this narrow recovery for that case. It may reopen a completed queue to active, so work can resume.
+- does: For an owned item retired with `proxy_unavailable` and no linked run, probe its effective proxy and schedule it after recovery; a separate repair call is not required. Use this narrow recovery for that case. It only schedules: a completed queue becomes waiting and a waiting queue stays waiting, with every original worker still released and no drain notification. It never reacquires a phone or starts a queue; call resume_queue when execution is intended.
 - input: path { queue_id: string; item_id: string } · body RetiredReenqueueRequest { expectedClaimGeneration: string; expectedEffectiveProxy: EffectiveProxyRequest }
 - returns: RetiredReenqueueResponse
 - flags: changes data · destructive: confirm with the user first
