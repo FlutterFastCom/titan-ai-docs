@@ -6,7 +6,7 @@ tools: [list_user_runs, get_user_run, list_user_run_steps, list_activity, get_us
 sources:
   - be:src/adapters/http/run_execution/errors.rs
   - be:src/adapters/http/mcp/presentation.rs
-verified_be: dda945b4
+verified_be: 98be5af0
 ---
 # A run failed — find out why and fix it
 

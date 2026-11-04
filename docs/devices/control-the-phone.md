@@ -9,7 +9,7 @@ sources:
   - be:src/adapters/http/auth_api_keys_catalog.rs
   - be:src/application/commands/phone_control.rs
   - be:src/domain/device_commands/phone_control.rs
-verified_be: dda945b4
+verified_be: 98be5af0
 ---
 # See the phone's screen and act on it
 
@@ -20,8 +20,9 @@ refuse because the phone isn't ready, follow `devices/index.md` instead.
 
 ## Look: `get_device_screen`
 Takes a NEW screenshot and returns it as an image with its `width` and `height`. `receivedAt` is when Titan's server
-received the screenshot — close to when it was taken, but not the same moment; use it as the screenshot's time. If no fresh picture can be taken the call refuses — it never gives you an old one. Do not use the cached
-thumbnail tools to judge what the phone shows now.
+received this screenshot; use it as the screenshot's time (the phone's own capture time is not given). If no fresh
+picture can be taken the call refuses — it never gives you an old one. Do not use the cached thumbnail tools to judge
+what the phone shows now.
 
 ## Act: `device_action` (one action per call)
 | `action.type` | what it does | fields |

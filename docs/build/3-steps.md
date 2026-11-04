@@ -8,7 +8,7 @@ sources:
   - be:src/adapters/http/strategies/representations_definition.rs
   - be:src/application/strategies/definition.rs
   - be:src/adapters/http/auth_api_keys_catalog.rs
-verified_be: dda945b4
+verified_be: 98be5af0
 ---
 # Step 3 — create the strategy and save its steps
 

@@ -6,7 +6,7 @@ tools: [list_user_strategies, list_releases, get_release_run_inputs, get_release
 sources:
   - be:src/application/run_execution/create.rs
   - be:src/adapters/http/mcp/presentation.rs
-verified_be: dda945b4
+verified_be: 98be5af0
 ---
 # Run a strategy (own, shared or public)
 

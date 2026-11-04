@@ -6,7 +6,7 @@ tools: [get_device_summary, list_devices, list_device_agent_updates, get_host_de
 sources:
   - be:src/adapters/http/auth_api_keys_catalog.rs
   - be:src/domain/device_status_policy.rs
-verified_be: dda945b4
+verified_be: 98be5af0
 ---
 # "What should I do now?"
 

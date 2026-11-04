@@ -7,7 +7,7 @@ error_codes: [invalid_share_recipients, share_recipient_not_found]
 sources:
   - be:src/adapters/http/mcp/presentation.rs
   - be:src/adapters/http/strategies/error_response.rs
-verified_be: dda945b4
+verified_be: 98be5af0
 ---
 # Share a strategy
 

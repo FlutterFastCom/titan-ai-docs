@@ -8,7 +8,7 @@ sources:
   - be:src/adapters/http/mcp/presentation.rs
   - be:docs/business/features/shipped/F-STRATEGY-AUTHORING.md
   - be:src/adapters/http/strategies/error_response.rs
-verified_be: dda945b4
+verified_be: 98be5af0
 ---
 # Step 4 — make the saved steps live
 
