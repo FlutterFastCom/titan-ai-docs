@@ -4,7 +4,7 @@ generated: true
 audience: both
 ---
 
-# Tools — devices (4)
+# Tools — devices (6)
 
 > Generated from the Titan code — do not edit by hand. For the assistant only: never show tool names, arguments or codes to the user.
 
@@ -32,3 +32,15 @@ audience: both
 - input: path { device_id: string }
 - returns: DeviceDto
 - flags: read-only
+
+## get_device_screen
+- does: Capture one NEW screenshot from your current phone session and return it as a real JPEG image block with safe text metadata: true pixel width/height, RFC3339 capturedAt from the agent clock, captureTimeSource=agent, a separate receivedAt backend receipt timestamp, captureCommandId and the canonical unsigned decimal string frameSeq. device_id is the exact UDID, not numeric rowId. Send no body or {}; every query parameter is rejected. This is a fresh capture, not the cached thumbnail or latest buffered frame, and no older image is substituted when the new one is missing or invalid. There is no Back action, and a capture may interleave with a running phone strategy. Freshness is the agent's own capture time, not proof of clock synchronization. It charges the shared per-user device-command budget once per logical request and is never automatically retried.
+- input: path { device_id: string } · body CaptureDeviceScreenRequest {  }
+- returns: PhoneScreenResponse
+- flags: read-only
+
+## device_action
+- does: Destructive: send exactly one closed safe action to your current phone session — tap_pct, long_press_pct, swipe_pct, scroll_pct, press_home, launch_app, close_app, accept_alert, dismiss_alert or type_text — and return the acknowledged receipt with an optional fresh post-action screen. Coordinates are screen fractions from 0 to 1, durations are milliseconds, text is at most 16384 UTF-8 bytes and bundle_id at most 256. delivery=acknowledged means delivery was accepted; effect=unverified means the UI may not have changed. An accepted action, including accept-alert, type-text or an app action, can have real consequences and is not guaranteed harmless or repairable. screen=null with screenError is still the acknowledged result, not a mutation failure: inspect fresh state with get_device_screen before issuing any new action. No Back action exists, generic /commands remains key-forbidden, and the action may interleave with a running strategy. It charges the shared per-user device-command budget once per logical request; never automatically repeat a mutation after a lost or uncertain reply.
+- input: path { device_id: string } · body PhoneDeviceActionRequest { action: PhoneDeviceActionWire }
+- returns: PhoneActionResponse
+- flags: changes data · destructive: confirm with the user first
