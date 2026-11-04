@@ -7,7 +7,7 @@ error_codes: [transcript_changed]
 sources:
   - be:src/adapters/http/mcp/presentation.rs
   - be:src/application/run_execution/executor/progress.rs
-verified_be: 92a0a9c1
+verified_be: dda945b4
 ---
 # Step 6 — watch the run and read what happened
 

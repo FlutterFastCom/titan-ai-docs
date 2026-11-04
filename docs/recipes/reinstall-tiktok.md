@@ -6,7 +6,7 @@ tools: [list_tools, create_strategy, save_definition, create_release]
 sources:
   - be:src/application/tools/dispatchable_catalog.rs
   - conductor:missions/2026-10-07-strategy-sharing-every-user-creates-prompt-parts/RELIABILITY-QUEUE.md
-verified_be: 92a0a9c1
+verified_be: dda945b4
 verified_conductor: 732df11a
 ---
 # Recipe — remove TikTok and install it again   (each part PROVEN separately)

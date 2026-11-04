@@ -6,7 +6,7 @@ tools: [list_user_strategies, create_strategy]
 error_codes: [strategy_authoring_disabled]
 sources:
   - be:src/adapters/http/mcp/presentation.rs
-verified_be: 92a0a9c1
+verified_be: dda945b4
 ---
 # The user wants a new strategy
 

@@ -7,7 +7,7 @@ sources:
   - be:src/adapters/http/mcp/presentation.rs
   - be:src/application/strategy_presets/save_plan.rs
   - be:src/application/strategy_presets/run_inputs.rs
-verified_be: 92a0a9c1
+verified_be: dda945b4
 ---
 # Step 7 — make it better
 

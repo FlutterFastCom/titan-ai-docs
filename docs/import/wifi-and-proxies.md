@@ -7,7 +7,7 @@ error_codes: [user_proxy_probe_busy]
 sources:
   - be:src/domain/wifi.rs
   - be:src/adapters/http/auth_api_keys_catalog.rs
-verified_be: 92a0a9c1
+verified_be: dda945b4
 ---
 # Import Wi-Fi networks and proxies
 

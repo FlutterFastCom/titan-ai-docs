@@ -2,11 +2,11 @@
 id: goals/run-a-strategy
 audience: consumer
 intents: [run strategy, start, run on my phone, use strategy, use shared strategy]
-tools: [list_user_strategies, list_releases, get_release_run_inputs, get_release_input_options, list_user_presets, create_strategy_preset, list_devices, list_adapter_options, create_run, play_run, get_user_run, wait_seconds]
+tools: [list_user_strategies, list_releases, get_release_run_inputs, get_release_input_options, list_user_presets, create_strategy_preset, list_devices, list_adapter_options, create_run, play_run, get_user_run, wait_seconds, get_device_screen]
 sources:
   - be:src/application/run_execution/create.rs
   - be:src/adapters/http/mcp/presentation.rs
-verified_be: 92a0a9c1
+verified_be: dda945b4
 ---
 # Run a strategy (own, shared or public)
 
@@ -27,4 +27,5 @@ Rules for every run (they apply before the steps):
    AI service: `list_adapter_options` (if there is exactly one, use it without asking).
 5. Confirm: "Run '<strategy>' on <phone> with <account>? It will post publicly." → `create_run`, then `play_run`
    (`build/5-run-it.md` has the exact shapes; for a shared/public strategy use the release form).
-6. Watch with `get_user_run` + `wait_seconds`; report milestones and the result (`build/6-check-the-result.md`).
+6. Watch with `get_user_run` + `wait_seconds`; report milestones and the result (`build/6-check-the-result.md`). No
+   progress for a long time? Look at the phone's screen (`devices/control-the-phone.md`).

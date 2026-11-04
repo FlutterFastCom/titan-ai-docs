@@ -9,7 +9,9 @@ sources:
   - be:src/adapters/http/strategies/error_response.rs
   - be:src/adapters/http/resources/batch_errors.rs
   - be:src/adapters/http/mcp/error_guidance.rs
-verified_be: 92a0a9c1
+  - fe:src/shared/i18n/locales/en/common.json
+verified_be: dda945b4
+verified_fe: 80c74183
 ---
 # Errors in plain words
 
@@ -20,7 +22,7 @@ the code to the user; say the plain meaning and do the fix. Which tool returns w
 | code | say | do |
 |---|---|---|
 | `access_not_granted` | "Your Titan access isn't active (or has expired)." | they must ask an administrator; check **Settings → User** for the date |
-| `api_key_invalid`, `auth_expired_token` and other `auth_*` | "My connection key to your Titan account no longer works." | ask them to create a new key in **Settings → API keys** and update your connection |
+| `api_key_invalid`, `auth_expired_token` and other `auth_*` | "My connection key to your Titan account no longer works." | ask them to create a new key in **Settings → MCP API keys** and update your connection |
 | `api_key_route_forbidden` | — | this action isn't available through a key (often admin-only); don't retry |
 | `strategy_authoring_disabled` | "Your account isn't allowed to build strategies yet." | an administrator must enable it; offer to run shared strategies meanwhile |
 | `mcp_rate_limited` | (nothing unless long) | `wait_seconds` for `retryAfterSeconds` (split into ≤30 s waits), then continue |

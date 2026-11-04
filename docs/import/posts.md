@@ -7,7 +7,7 @@ sources:
   - be:src/application/resources/records.rs
   - be:src/adapters/http/auth_api_keys_catalog.rs
   - be:src/adapters/http/mcp/presentation.rs
-verified_be: 92a0a9c1
+verified_be: dda945b4
 ---
 # Import posts (photos / videos with their texts)
 

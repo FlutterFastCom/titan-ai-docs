@@ -7,9 +7,9 @@ sources:
   - agent:src/infra/logging.rs
   - agent:src/infra/credential_store.rs
   - agent:docs/HANDOFF-COLLECT-AGENT-LOGS.md
-verified_be: 92a0a9c1
-verified_fe: a93e3f30
-verified_agent: 2ca0430
+verified_be: dda945b4
+verified_fe: 80c74183
+verified_agent: 1814365
 ---
 # Collect the PC Agent logs (when the steps did not help)
 

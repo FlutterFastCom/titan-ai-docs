@@ -8,9 +8,9 @@ sources:
   - agent:docs/AI-CLIENT-TRIAGE.md
   - agent:src/app/device_status_discovery_attempt.rs
   - agent:src/infra/instance_lock.rs
-verified_be: 92a0a9c1
-verified_fe: a93e3f30
-verified_agent: 2ca0430
+verified_be: dda945b4
+verified_fe: 80c74183
+verified_agent: 1814365
 ---
 # Phones show offline, stale, or keep dropping
 

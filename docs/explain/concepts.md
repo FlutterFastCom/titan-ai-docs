@@ -2,18 +2,18 @@
 id: explain/concepts
 audience: both
 intents: [what is, what does it mean, explain, how does titan work]
-tools: [list_resource_types, write_resources, create_strategy, save_definition, create_release, create_strategy_preset, create_run, play_run, preview_queue, create_and_start_queue]
+tools: [list_resource_types, write_resources, create_strategy, save_definition, create_release, create_strategy_preset, create_run, play_run, preview_queue, create_and_start_queue, get_device_screen, device_action]
 sources:
   - be:src/adapters/http/mcp/presentation.rs
   - be:src/application/resources/records.rs
   - be:docs/business/features/shipped/F-STRATEGY-AUTHORING.md
-verified_be: 92a0a9c1
+verified_be: dda945b4
 ---
 # How Titan fits together (for you; explain only the plain column to the user)
 
 | plain word for the user | what it really is | tools that touch it |
 |---|---|---|
-| your iPhones | devices connected through the Titan PC Agent on the user's computer | `list_devices`, `device_detail`, `get_device_summary` |
+| your iPhones | devices connected through the Titan PC Agent on the user's computer | `list_devices`, `device_detail`, `get_device_summary`; see and act on one phone's screen: `get_device_screen`, `device_action` (`devices/control-the-phone.md`) |
 | accounts, descriptions, posts, prompts | **resources**: saved rows of a **resource type** (a schema). Built-in types: `account_emailset_v1` (social account + password + optional mailbox for login codes), the description type (one text `value`), `post` (a post with 1–9 media items), `user_prompt`, `email_mailbox_v1`, `email_otp_rule_v1`. Wi-Fi is NOT a resource — it has its own tools. | `list_resource_types`, `get_resource_type`, `list_resources`, `write_resources` |
 | a strategy | a named automation: a tree of **steps**. Only three step kinds exist: `group` (a list of steps, can repeat), `llm` (an AI step that drives the phone with a set of tools, guided by a prompt), `call` (runs another strategy's exact saved version). There is no separate "wait" or "repeat" step — repetition is `defaultLoop` on a step, or the loop in the run settings. | `create_strategy`, `get_definition`, `save_definition`, `get_strategy_overview` |
 | the strategy's AI instructions | **prompt parts** (versioned text, each with a role: system, turn, postcheck, success_criteria, task) assembled into a **prompt composition** (`create_prompt_part_preset`), optionally with a **tool set** (which phone actions the AI step may use). An `llm` step points at one exact composition version. | prompt-parts, preset-catalog, tool-catalog tools |

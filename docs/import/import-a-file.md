@@ -8,7 +8,7 @@ sources:
   - be:src/adapters/http/resources/batch_dto.rs
   - be:src/adapters/http/resources/batch_routes.rs
   - be:docs/business/features/shipped/F-RESOURCES.md
-verified_be: 92a0a9c1
+verified_be: dda945b4
 ---
 # The user gives you a file
 

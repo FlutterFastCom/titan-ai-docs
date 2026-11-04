@@ -5,7 +5,7 @@ intents: [build a strategy, create a strategy, make an automation, how do I buil
 tools: [create_strategy, save_definition, create_release]
 sources:
   - be:src/adapters/http/mcp/presentation.rs
-verified_be: 92a0a9c1
+verified_be: dda945b4
 ---
 # Building a strategy — the order (for you; the user never sees these steps)
 

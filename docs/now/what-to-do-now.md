@@ -6,7 +6,7 @@ tools: [get_device_summary, list_devices, list_device_agent_updates, get_host_de
 sources:
   - be:src/adapters/http/auth_api_keys_catalog.rs
   - be:src/domain/device_status_policy.rs
-verified_be: 92a0a9c1
+verified_be: dda945b4
 ---
 # "What should I do now?"
 
@@ -26,6 +26,7 @@ next step in plain words. Do the reads silently — the user only sees your conc
 | what you found | say / do next | read next |
 |---|---|---|
 | a batch or run is in progress | "Your batch on N phones is running: X done, Y left." Offer to watch it. | `goals/run-at-scale.md` |
+| a batch is `waiting` (runs put back, phones free) | "Your batch has N runs waiting to go again. Start them now?" | `goals/run-at-scale.md` |
 | the newest run failed | "Your last run stopped at <plain step>. Want me to find out why?" | `goals/fix-a-failed-run.md` |
 | total = 0 | "Let's connect your first iPhone." | `devices/connect-a-phone.md` |
 | total > 0 but ready = 0 | "Your phone is not ready yet — let's fix the connection." | `devices/index.md` |

@@ -9,9 +9,9 @@ sources:
   - fe:src/shared/i18n/locales/en/common.json
   - fe:src/shared/i18n/locales/en/devices.json
   - agent:ui/src/main.jsx
-verified_be: 92a0a9c1
-verified_fe: a93e3f30
-verified_agent: 2ca0430
+verified_be: dda945b4
+verified_fe: 80c74183
+verified_agent: 1814365
 ---
 # Connect a new iPhone
 
@@ -28,18 +28,23 @@ You can only watch progress. The user does every step on their PC and phone. Giv
   Linux installer — do not invent one.
 
 ## 2. Pair the PC with the account (user)
-1. "In Titan, open **PC Agent** in the left menu and click **Connect**."
-2. "Copy the setup code into the agent's pairing screen and click **Confirm** once."
+1. "In Titan, open **PC Agent** in the left menu and click **Get setup code**."
+2. "Copy the setup code into the agent's pairing screen and click **Confirm** once." The code is shown only once.
 3. "Wait — don't make a new code while it is connecting."
-The web app moves from "Connect your machine" to "Waiting for the agent to connect…" to "PC Agent connected".
+The web app moves from "Not connected" to "Waiting for the agent to connect…" to "Connected".
 - Agent says **"Paired — relaunch to finish"**: "Click **Quit agent**, then open the app again. Don't make a new code."
-- Web app says **"Agent registered — currently offline"**: the pairing worked; the agent is not running → step 1's
-  "open the agent" again.
+- Web app says **"Disconnected"**: the pairing worked; the agent is not running → step 1's "open the agent" again.
+- Only one computer can be linked to an account. A new setup code on a paired account (**Connect a different
+  computer**) ends the old computer's pairing at once — never do it "to refresh".
 
-## 3. Plug in the phone (user, any OS)
+## 3. Plug in the phone and add it (user, any OS)
 1. "Connect the iPhone directly with a USB data cable (not a hub, not a charge-only cable). Unlock it."
-2. "If it asks **Trust This Computer**, tap **Trust** and enter the passcode."
-3. "Open **Settings → Privacy & Security → Developer Mode**, turn it on and confirm." It cannot be turned on remotely.
+2. Windows and Linux: "In Titan, open **Devices**, click **Connect a phone**, then **Connect** next to your iPhone
+   under **Available on this computer**." If the phone is already in the Devices list (on a Mac it may be added by
+   itself), skip this. Connecting a phone does not start a run.
+3. "If it asks **Trust This Computer**, tap **Trust** and enter the passcode." In Titan, click **Retry** after that if
+   it asks.
+4. "Open **Settings → Privacy & Security → Developer Mode**, turn it on and confirm." It cannot be turned on remotely.
 Finish the phone's first-time setup screens before this if needed.
 
 ## 4. Watch it become ready (you)

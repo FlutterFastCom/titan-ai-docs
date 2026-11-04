@@ -7,14 +7,20 @@ sources:
   - agent:docs/TRIAGE-DEVICE-NOT-DETECTED.md
   - agent:src/app/usb_disconnect_reconciler.rs
   - agent:src/infra/usbmux_listen.rs
-verified_be: 92a0a9c1
-verified_fe: a93e3f30
-verified_agent: 2ca0430
+  - fe:src/shared/i18n/locales/en/devices.json
+verified_be: dda945b4
+verified_fe: 80c74183
+verified_agent: 1814365
 ---
 # The phone is not detected
 
 First make sure the PC Agent itself is connected with a fresh report (`get_host_deps`, `list_devices`). If it is not,
 go to `offline-or-flapping.md` — a missing phone is often a missing agent.
+
+On Windows and Linux a plugged-in phone is not added by itself: it appears in the phone list only after the user adds
+it, and a phone removed with **Forget phone** has left the list. Ask first: "In Titan, open **Devices** and
+click **Connect a phone**. Is your iPhone listed under **Available on this computer**? Then click **Connect** next to
+it (unlock the phone and tap Trust if it asks, then **Retry**)." Only if it is not listed there, continue below.
 
 1. **User:** "Unlock the iPhone and plug it straight into the computer with a USB data cable. If it asks to Trust,
    tap Trust." → wait, then `device_detail`.

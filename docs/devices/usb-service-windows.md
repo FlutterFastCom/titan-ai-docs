@@ -7,9 +7,9 @@ sources:
   - agent:docs/TRIAGE-DEVICE-NOT-DETECTED.md
   - agent:src/app/host_dep_commands.rs
   - agent:src/app/host_dep_windows_probes.rs
-verified_be: 92a0a9c1
-verified_fe: a93e3f30
-verified_agent: 2ca0430
+verified_be: dda945b4
+verified_fe: 80c74183
+verified_agent: 1814365
 ---
 # Windows: the Apple USB service
 

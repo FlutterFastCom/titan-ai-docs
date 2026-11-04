@@ -2,12 +2,12 @@
 id: goals/run-at-scale
 audience: both
 intents: [many phones, all accounts, batch, repeat, schedule, every day, queue, run for each account]
-tools: [preview_queue, create_and_start_queue, create_queue_draft, finalize_queue_draft, start_queue, list_queues, list_queue_items, list_queue_workers, pause_queue_worker, resume_queue, soft_pause_queue, stop_queue]
+tools: [preview_queue, create_and_start_queue, create_queue_draft, finalize_queue_draft, start_queue, list_queues, list_queue_items, list_queue_workers, pause_queue_worker, requeue_queue_item, resume_queue, soft_pause_queue, stop_queue]
 sources:
   - be:src/adapters/http/run_execution/queue_dto.rs
   - be:src/application/run_execution/queue/generator.rs
   - be:src/adapters/http/auth_api_keys_catalog.rs
-verified_be: 92a0a9c1
+verified_be: dda945b4
 ---
 # Run on many phones / for many accounts / repeatedly
 
@@ -26,6 +26,11 @@ verified_be: 92a0a9c1
 4. `create_and_start_queue` with the same body plus `expectedItemCount` — this STARTS it. Want to prepare without
    starting? `create_queue_draft` → … → `finalize_queue_draft` → `start_queue` later.
 5. Watch: `list_queues`, `list_queue_items`, `list_queue_workers`; report progress every few minutes, not every poll.
+6. Run failed items again (`requeue_queue_item`) — confirm with the user first, because it can lead to new posts:
+   - batch still running (`active`): it stays active and the item runs again soon, by itself;
+   - batch finished (`completed`): it becomes `waiting` with all its phones free and does NOT start by itself —
+     `resume_queue` starts it again (confirm that too);
+   - a `ready` or `paused` batch keeps its status.
 
 ## Limits to tell the user honestly
 - A batch has no pause between runs and no "stop after the first failure": it keeps going until every run is done or

@@ -1,6 +1,6 @@
 # Setup
 
-1. Sign in at https://app.titan.red and create an API key (**Settings → API keys** → **Create key**). It starts with
+1. Sign in at https://app.titan.red and create an API key (**Settings → MCP API keys** → **Create key**). It starts with
    `tck_`. Copy it once — Titan will not show it again.
 2. In a terminal, set the key (never commit it or paste it into a file in this folder):
    ```

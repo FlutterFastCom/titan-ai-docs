@@ -8,7 +8,7 @@ sources:
   - be:src/adapters/http/mcp/presentation.rs
   - be:src/domain/tools/registry.rs
   - be:docs/business/features/shipped/F-PRODUCT-CATALOG.md
-verified_be: 92a0a9c1
+verified_be: dda945b4
 ---
 # Step 2 — the AI steps (what each step tells the phone-driving AI)
 

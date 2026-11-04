@@ -7,7 +7,7 @@ sources:
   - conductor:missions/2026-10-18-tiktok-upload-native-photos-step-gets-no-ordered/QUEUE.md
   - be:src/application/tools/photos_share.rs
   - be:src/domain/tools/registry.rs
-verified_be: 92a0a9c1
+verified_be: dda945b4
 verified_conductor: 732df11a
 ---
 # Recipe — post a photo carousel from an account already logged in   (PROVEN)

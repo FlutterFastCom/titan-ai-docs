@@ -7,7 +7,7 @@ sources:
   - conductor:missions/2026-10-07-strategy-sharing-every-user-creates-prompt-parts/RELIABILITY-QUEUE.md
   - be:src/domain/tools/registry.rs
   - be:src/application/tools/dispatchable_catalog.rs
-verified_be: 92a0a9c1
+verified_be: dda945b4
 verified_conductor: 732df11a
 ---
 # Recipe — reset the phone's network settings   (PROVEN)

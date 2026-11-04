@@ -9,9 +9,9 @@ sources:
   - agent:src/infra/windows_tunneld_task_control.rs
   - agent:src/infra/macos_tunneld_service.rs
   - fe:src/shared/i18n/locales/en/devices.json
-verified_be: 92a0a9c1
-verified_fe: a93e3f30
-verified_agent: 2ca0430
+verified_be: dda945b4
+verified_fe: 80c74183
+verified_agent: 1814365
 ---
 # The phone connection (tunnel) is down — iOS 17 and newer
 

@@ -9,9 +9,9 @@ sources:
   - be:src/domain/agents.rs
   - be:src/domain/facet_probe_state.rs
   - be:src/domain/agent_status_issue_code.rs
-verified_be: 92a0a9c1
-verified_fe: a93e3f30
-verified_agent: 2ca0430
+verified_be: dda945b4
+verified_fe: 80c74183
+verified_agent: 1814365
 ---
 # What a phone's status means (for you)
 
@@ -27,7 +27,8 @@ Summary counts: `ready` = fresh AND ready; `blocked` = every phone that is not r
 
 ## The phone's stages
 `detached` (not plugged / not seen) → `attached` → `trust_pending` (user must tap Trust) → `tunnel_starting` →
-`wda_starting` → `ready`. Also: `busy` (doing a run — don't interfere), `recovering` (Titan is fixing it — wait),
+`wda_starting` → `ready`. Also: `busy` (doing a run — don't interfere unless the run is stuck:
+`control-the-phone.md`), `recovering` (Titan is fixing it — wait),
 `quarantined` (recovery gave up — collect logs), `unknown` (no evidence yet).
 
 ## Parts of the connection (from `device_detail`)
@@ -47,6 +48,14 @@ Summary counts: `ready` = fresh AND ready; `blocked` = every phone that is not r
 `observability_lost` / `presence_source_down` → Titan lost sight of it; this does not mean the phone is gone ·
 `auth_missing` / `auth_invalid` → the PC Agent's sign-in is the problem; do NOT tell the user to re-pair before checking
 `agent-update.md`.
+
+## Hints on each part (`presentation`, when the PC Agent sends one)
+`ok` → fine · `not_checked`, `checking`, `recovering`, `problem_auto` → Titan is on it: wait and look again ·
+`waiting` with `waitingFor` → it waits for that other part; fix that one first · `problem_user` with
+`instruction: true` → this is the one thing the user must do (the web app shows the same instruction, e.g. "Unlock
+the phone and tap Trust.") · no hint or `unknown` → use the values and reasons below. A hint is advice, not a readiness verdict.
+`tunnel_failed` is shown only while the tunnel is really failed now; an old failure that the agent's current check
+overrules is dropped.
 
 Reasons on a part: `dependency_unready`/`missing_deps` → fix what it is blocked by first · `probe_timeout`/
 `probe_failed` → check again once, then logs · `user_action_required` → follow that part's instruction ·
