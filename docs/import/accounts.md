@@ -7,7 +7,7 @@ sources:
   - be:src/application/resources/records.rs
   - be:src/application/resources/mailboxes.rs
   - be:src/domain/accounts.rs
-verified_be: dda945b4
+verified_be: 63de62c4
 ---
 # Import social accounts
 

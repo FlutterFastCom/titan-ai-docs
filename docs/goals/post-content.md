@@ -6,7 +6,7 @@ tools: [list_user_strategies, get_media_library, list_resources, write_resources
 sources:
   - be:src/application/tools/photos_share.rs
   - be:src/application/resources/records.rs
-verified_be: dda945b4
+verified_be: 63de62c4
 ---
 # The user wants to post content
 

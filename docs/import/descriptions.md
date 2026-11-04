@@ -6,7 +6,7 @@ tools: [list_resource_types, get_resource_type, write_resources]
 sources:
   - be:src/application/resources/records.rs
   - be:src/domain/descriptions.rs
-verified_be: dda945b4
+verified_be: 63de62c4
 ---
 # Import descriptions (captions, bios, any short texts)
 

@@ -8,7 +8,7 @@ sources:
   - be:src/application/resources/records.rs
   - be:src/adapters/http/resources/batch_dto.rs
   - be:docs/business/features/shipped/F-RESOURCES.md
-verified_be: dda945b4
+verified_be: 63de62c4
 ---
 # Step 1 — the content the strategy will use
 

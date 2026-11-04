@@ -7,7 +7,7 @@ sources:
   - be:src/adapters/http/mcp/presentation.rs
   - be:src/application/resources/records.rs
   - be:docs/business/features/shipped/F-STRATEGY-AUTHORING.md
-verified_be: 98be5af0
+verified_be: 63de62c4
 ---
 # How Titan fits together (for you; explain only the plain column to the user)
 
