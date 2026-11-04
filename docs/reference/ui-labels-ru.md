@@ -21,12 +21,16 @@ exactly as written. A label not listed here: describe where it is instead of tra
 | Apple Mobile Device Service | Служба мобильных устройств Apple |
 | Apply | Применить |
 | Auto | Автоматически |
+| Available on this computer | Доступны на этом компьютере |
 | Back | Назад |
 | Change | Изменить |
+| Change nickname | Изменить никнейм |
+| Check status | Проверить статус |
 | Clear search | Очистить поиск |
 | Close | Закрыть |
 | Confirm | Подтвердить |
 | Connect | Подключить |
+| Connect a phone | Подключить телефон |
 | Connection | Подключение |
 | Copy | Копировать |
 | Create key | Создать ключ |
@@ -34,8 +38,11 @@ exactly as written. A label not listed here: describe where it is instead of tra
 | Dev Tools | Инструменты разработки |
 | Developer Mode | Режим разработчика |
 | Devices | Устройства |
+| Disconnected | Отключено / Отключён |
 | Encoder | Кодировщик |
 | Filter | Фильтр |
+| Forget phone | Забыть телефон |
+| Get setup code | Получить код настройки |
 | Host dependencies are ready. | Зависимости хоста готовы. |
 | Host dependencies need attention. | Зависимости хоста требуют внимания. |
 | Host dependency status is being updated. | Статус зависимостей хоста обновляется. |
@@ -75,6 +82,7 @@ exactly as written. A label not listed here: describe where it is instead of tra
 | Start | Запустить |
 | Strategies | Стратегии |
 | System | Система |
+| Technical details | Технические данные / Технические сведения |
 | Titan navigation | Навигация Titan |
 | Trust | Доверие |
 | User | Пользователь |
