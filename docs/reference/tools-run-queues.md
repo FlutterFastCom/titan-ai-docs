@@ -8,6 +8,8 @@ audience: both
 
 > Generated from the Titan code — do not edit by hand. For the assistant only: never show tool names, arguments or codes to the user.
 
+> A capitalised type name in an input (for example `QueueArgRequest`) is spelled out in request-shapes.md.
+
 
 ## preview_queue
 - does: Preview run queue creation without starting work. Source-readable owners may read get_run_requirements with strategyPresetId or strategyPresetVersionId, copy root pickers[].selectorKey/scalars[].name or calls[]. scoped fields with the exact calls[].path, and echo strategyPresetVersionId into preview/create. Omit that pin to select the current saved preset at request time, resolved once. Labels are not selectors. Foreign-source release: on that exact runnable release, get_release_run_inputs returns each input's inputId and opaque queueArgument.selector/path (path=[] for root inputs) and get_release_input_options(inputId) returns pickable rowId values; use your own saved setup/version; get_run_requirements is only for source-readable owners, never a required first step. A queue needs exactly one eligible root driver (direct: manual/entity/resource root; draft: entity/resource only). If the release has no eligible root driver, including an inputless contract, a queue cannot be created: use create_run then an explicit play_run instead; never invent a driver or dummy value.

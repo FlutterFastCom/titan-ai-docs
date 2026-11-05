@@ -8,6 +8,8 @@ audience: both
 
 > Generated from the Titan code — do not edit by hand. For the assistant only: never show tool names, arguments or codes to the user.
 
+> A capitalised type name in an input (for example `QueueArgRequest`) is spelled out in request-shapes.md.
+
 
 ## list_devices
 - does: List managed devices with pagination and projected status. `online` means a fresh snapshot; `ready` additionally requires projected readiness. Each row includes numeric `rowId` and UDID `deviceId`; check current availability before assigning work.

@@ -35,3 +35,5 @@ audience: both
 | tool-catalog | 14 | tools-tool-catalog.md |
 | user-proxies | 5 | tools-user-proxies.md |
 | wifis | 5 | tools-wifis.md |
+
+Every nested type an input names (68) is spelled out in request-shapes.md.

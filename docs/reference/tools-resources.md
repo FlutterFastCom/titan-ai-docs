@@ -8,6 +8,8 @@ audience: both
 
 > Generated from the Titan code — do not edit by hand. For the assistant only: never show tool names, arguments or codes to the user.
 
+> A capitalised type name in an input (for example `QueueArgRequest`) is spelled out in request-shapes.md.
+
 
 ## list_resource_types
 - does: List active public resource types (scope all, the default) or only your authored types (scope owned). Optional search matches a literal ASCII-case-insensitive key substring or exact canonical type id within that scope, with 1 to 64 Unicode scalars. Reset page to 1 when scope or search changes.

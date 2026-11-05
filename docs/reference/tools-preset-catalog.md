@@ -8,6 +8,8 @@ audience: both
 
 > Generated from the Titan code — do not edit by hand. For the assistant only: never show tool names, arguments or codes to the user.
 
+> A capitalised type name in an input (for example `QueueArgRequest`) is spelled out in request-shapes.md.
+
 
 ## get_prompt_part_preset_version
 - does: get prompt part preset version. Caller rights and exact pins apply.

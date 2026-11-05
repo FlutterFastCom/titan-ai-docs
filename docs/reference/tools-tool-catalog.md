@@ -8,6 +8,8 @@ audience: both
 
 > Generated from the Titan code — do not edit by hand. For the assistant only: never show tool names, arguments or codes to the user.
 
+> A capitalised type name in an input (for example `QueueArgRequest`) is spelled out in request-shapes.md.
+
 
 ## get_tool_set_version
 - does: Read one exact global tool-set version by id; any granted caller, independent of creator. Exact pins apply; reading grants no tool invocation right.

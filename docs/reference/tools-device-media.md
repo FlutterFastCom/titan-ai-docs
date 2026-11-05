@@ -8,6 +8,8 @@ audience: both
 
 > Generated from the Titan code — do not edit by hand. For the assistant only: never show tool names, arguments or codes to the user.
 
+> A capitalised type name in an input (for example `QueueArgRequest`) is spelled out in request-shapes.md.
+
 
 ## screen_thumb_jpeg
 - does: Read the owned device's buffered JPEG thumbnail as image content; device_id is its UDID, not numeric rowId. Prefer this over screen_latest_jpeg for polling. Optional query.w accepts 1..320; cached thumbnail size follows broker configuration. The read may warm the existing agent thumbnail stream. frameAgeMs/frameState describe the returned frame; age measures time since backend receipt, not device capture time. screen_frame_absent means no buffered frame, not a failed JSON parser. Read device_detail/list_devices and wait_seconds before polling again.

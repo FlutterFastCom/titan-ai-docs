@@ -8,6 +8,8 @@ audience: both
 
 > Generated from the Titan code — do not edit by hand. For the assistant only: never show tool names, arguments or codes to the user.
 
+> A capitalised type name in an input (for example `QueueArgRequest`) is spelled out in request-shapes.md.
+
 
 ## list_user_strategies
 - does: List safe strategy metadata with nullable exact current versionId/versionNumber, affirmative isArchived, a nullable newest eligible (sealed, non-withdrawn) releaseId and truthful owner/access markers plus each row's relation (mine, shared-with-me, public, private), actual root publication marker isPublished and current canManage hint. Granted non-admins discover their own, shared-with-them and every current public strategy automatically, with an optional source filter; current admins discover all users' strategies, including private strategies. For either audience absent or empty source keeps the full admitted base; nonempty owned,shared,public CSV selects exclusive Mine/Shared/Public classes in that precedence and excludes admin private roots. Optional ownerIds (at most 100 full owner UUIDs) only narrows the visible results. canManage is a fresh hint that never replaces mutation admission. Ordinary callers mutate only actually owned roots with fresh author permission; a current granted administrator has owner-equivalent strategy rights on any owner's strategy through a session, API key or MCP, recorded as the real actor. Metadata reads do not require author permission.

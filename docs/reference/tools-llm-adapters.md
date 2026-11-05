@@ -8,6 +8,8 @@ audience: both
 
 > Generated from the Titan code — do not edit by hand. For the assistant only: never show tool names, arguments or codes to the user.
 
+> A capitalised type name in an input (for example `QueueArgRequest`) is spelled out in request-shapes.md.
+
 
 ## list_adapters
 - does: List all live supported adapters owned by the key holder, with provider, model, rate-limit and status details. Unpaged; use list_adapter_options for paged ID and label choices. No credentials.

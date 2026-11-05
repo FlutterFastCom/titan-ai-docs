@@ -8,6 +8,8 @@ audience: both
 
 > Generated from the Titan code — do not edit by hand. For the assistant only: never show tool names, arguments or codes to the user.
 
+> A capitalised type name in an input (for example `QueueArgRequest`) is spelled out in request-shapes.md.
+
 
 ## get_ai_usage_summary
 - does: Read your own recorded AI request usage evidence for exactly one scope (message, chat, native step attempt, run, queue, adapter or owner): known token sums with per-category reported and missing request counts, request outcome and completeness counts, and coverage. This is usage evidence, never provider billing certainty; history before accounting began is unavailable, not zero. Owner and adapter scopes need a from/to window of at most 31 days. No credentials.
