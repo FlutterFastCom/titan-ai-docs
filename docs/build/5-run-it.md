@@ -4,11 +4,6 @@ audience: both
 intents: [run settings, test run, start, run on phone]
 tools: [list_releases, get_release_run_inputs, get_release_input_options, create_strategy_preset, list_devices, list_adapter_options, get_run_requirements, create_run, play_run]
 error_codes: [run_inputs_missing, invalid_run_inputs, run_args_invalid, resource_row_not_found, resource_schema_version_mismatch, resource_row_revision_conflict, resource_in_use, device_not_ready, supervision_required, supervision_unconfirmed, strategy_access_revoked, strategy_unavailable, run_already_running, run_not_playable]
-sources:
-  - be:src/adapters/http/run_execution/errors.rs
-  - be:src/application/run_execution/create.rs
-  - be:src/application/strategy_presets/run_inputs.rs
-verified_be: dda945b4
 ---
 # Step 5 — run settings and the first run
 

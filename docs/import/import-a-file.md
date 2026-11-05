@@ -4,11 +4,6 @@ audience: both
 intents: [import file, csv, upload list, add many accounts, here is my file, spreadsheet, text file]
 tools: [list_resource_types, get_resource_type, list_resources, write_resources]
 error_codes: [bulk_conflict, resource_timeout]
-sources:
-  - be:src/adapters/http/resources/batch_dto.rs
-  - be:src/adapters/http/resources/batch_routes.rs
-  - be:docs/business/features/shipped/F-RESOURCES.md
-verified_be: dda945b4
 ---
 # The user gives you a file
 

@@ -4,10 +4,6 @@ audience: both
 intents: [did it work, what happened, why did it fail, show the run, transcript]
 tools: [get_user_run, list_activity, list_user_run_passes, list_user_run_steps, read_run_transcript, get_user_message_screenshot, wait_seconds]
 error_codes: [transcript_changed]
-sources:
-  - be:src/adapters/http/mcp/presentation.rs
-  - be:src/application/run_execution/executor/progress.rs
-verified_be: 98be5af0
 ---
 # Step 6 — watch the run and read what happened
 

@@ -3,13 +3,6 @@ id: devices/usb-service-windows
 audience: both
 intents: [windows usb, apple mobile device service, usbmux, itunes driver]
 tools: [device_detail, get_host_deps]
-sources:
-  - agent:docs/TRIAGE-DEVICE-NOT-DETECTED.md
-  - agent:src/app/host_dep_commands.rs
-  - agent:src/app/host_dep_windows_probes.rs
-verified_be: dda945b4
-verified_fe: 80c74183
-verified_agent: 1814365
 ---
 # Windows: the Apple USB service
 

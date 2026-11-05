@@ -3,10 +3,6 @@ id: now/what-to-do-now
 audience: both
 intents: [what should I do now, where do I start, what next, is everything ready, help me get started, status]
 tools: [get_device_summary, list_devices, list_device_agent_updates, get_host_deps, list_user_strategies, list_user_presets, list_resources, list_user_runs, list_queues]
-sources:
-  - be:src/adapters/http/auth_api_keys_catalog.rs
-  - be:src/domain/device_status_policy.rs
-verified_be: 98be5af0
 ---
 # "What should I do now?"
 

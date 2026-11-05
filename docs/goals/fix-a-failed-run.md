@@ -3,10 +3,6 @@ id: goals/fix-a-failed-run
 audience: both
 intents: [run failed, why did it fail, error, stopped, it did not work, broken]
 tools: [list_user_runs, get_user_run, list_user_run_steps, list_activity, get_user_message_screenshot, read_run_transcript, device_detail, get_device_screen, device_action]
-sources:
-  - be:src/adapters/http/run_execution/errors.rs
-  - be:src/adapters/http/mcp/presentation.rs
-verified_be: 98be5af0
 ---
 # A run failed — find out why and fix it
 

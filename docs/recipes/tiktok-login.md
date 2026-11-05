@@ -3,12 +3,6 @@ id: recipes/tiktok-login
 audience: author
 intents: [login tiktok, sign in account, login with email code, otp]
 tools: [write_resources, create_strategy, save_definition, create_release]
-sources:
-  - conductor:missions/2026-10-15-reusable-email-otp-account-types-carry-an-otpset/LOGIN-QUEUE.md
-  - be:src/application/tools/registry.rs
-  - be:src/adapters/http/strategies/email_otp.rs
-verified_be: 92a0a9c1
-verified_conductor: 732df11a
 ---
 # Recipe — log into a TikTok account   (PROVEN)
 

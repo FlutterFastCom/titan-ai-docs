@@ -3,11 +3,6 @@ id: recipes/repeat-with-pauses
 audience: author
 intents: [repeat, loop, every hour, pause between, many times, schedule]
 tools: [save_definition, save_preset_plan]
-sources:
-  - be:src/application/strategies/definition.rs
-  - be:src/application/run_execution/executor/progress.rs
-  - be:src/application/strategy_presets/plan.rs
-verified_be: 92a0a9c1
 ---
 # Recipe — repeat with pauses   (mechanism confirmed)
 

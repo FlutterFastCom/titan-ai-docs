@@ -3,11 +3,6 @@ id: import/posts
 audience: both
 intents: [import posts, upload photos, upload videos, media, carousel, prepare post]
 tools: [get_media_library, select_media_folder, rescan_media, list_resource_types, get_resource_type, write_resources, wait_seconds]
-sources:
-  - be:src/application/resources/records.rs
-  - be:src/adapters/http/auth_api_keys_catalog.rs
-  - be:src/adapters/http/mcp/presentation.rs
-verified_be: 63de62c4
 ---
 # Import posts (photos / videos with their texts)
 

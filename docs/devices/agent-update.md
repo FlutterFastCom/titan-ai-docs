@@ -3,14 +3,6 @@ id: devices/agent-update
 audience: both
 intents: [agent update, update required, agent stopped, agent not running, new version]
 tools: [list_device_agent_updates, get_host_deps, list_devices]
-sources:
-  - be:src/domain/agent_release.rs
-  - fe:src/entities/devices/libs/constants/agent-release.constants.ts
-  - fe:src/shared/i18n/locales/en/common.json
-  - agent:ui/src/main.jsx
-verified_be: dda945b4
-verified_fe: 80c74183
-verified_agent: 1814365
 ---
 # The PC Agent is stopped or needs an update
 

@@ -4,10 +4,6 @@ audience: author
 intents: [share strategy, give access, make public, stop sharing, who can use my strategy]
 tools: [list_shares, add_shares, remove_shares, publish_strategy, unpublish_strategy, list_user_strategies]
 error_codes: [invalid_share_recipients, share_recipient_not_found]
-sources:
-  - be:src/adapters/http/mcp/presentation.rs
-  - be:src/adapters/http/strategies/error_response.rs
-verified_be: 98be5af0
 ---
 # Share a strategy
 

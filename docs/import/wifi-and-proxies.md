@@ -4,10 +4,6 @@ audience: both
 intents: [import wifi, wifi networks, add proxies, proxy list]
 tools: [create_wifi, list_wifis, create_user_proxy, list_user_proxies, probe_user_proxy, wait_seconds]
 error_codes: [user_proxy_probe_busy]
-sources:
-  - be:src/domain/wifi.rs
-  - be:src/adapters/http/auth_api_keys_catalog.rs
-verified_be: 98be5af0
 ---
 # Import Wi-Fi networks and proxies
 

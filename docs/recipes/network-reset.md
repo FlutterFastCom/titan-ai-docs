@@ -3,12 +3,6 @@ id: recipes/network-reset
 audience: author
 intents: [reset network, new ip, reset network settings, airplane, fresh connection]
 tools: [list_tools, create_strategy, save_definition, create_release]
-sources:
-  - conductor:missions/2026-10-07-strategy-sharing-every-user-creates-prompt-parts/RELIABILITY-QUEUE.md
-  - be:src/domain/tools/registry.rs
-  - be:src/application/tools/dispatchable_catalog.rs
-verified_be: dda945b4
-verified_conductor: 732df11a
 ---
 # Recipe — reset the phone's network settings   (PROVEN)
 

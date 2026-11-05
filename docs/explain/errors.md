@@ -4,14 +4,6 @@ audience: both
 intents: [error, failed, refused, not allowed, what does this error mean, why can't I]
 tools: [wait_seconds]
 error_codes: [access_not_granted, api_key_invalid, api_key_route_forbidden, auth_expired_token, mcp_rate_limited, strategy_authoring_disabled, run_inputs_missing, invalid_resource_binding, resource_row_not_found, resource_in_use, device_not_ready, device_trust_pending, usb_detached, screen_asleep, tunnel_failed, wda_not_ready, snapshot_stale, agent_disconnected, strategy_access_revoked, strategy_unavailable, strategy_not_found, bulk_conflict, resource_timeout, run_queue_draft_incomplete, run_queue_limit_exceeded, run_queue_worker_cap_exceeded, run_queue_worker_device_unavailable, user_proxy_dead, publish_post_invalid, payload_too_large, retry_budget_exhausted, phone_return_timeout]
-sources:
-  - be:src/adapters/http/run_execution/errors.rs
-  - be:src/adapters/http/strategies/error_response.rs
-  - be:src/adapters/http/resources/batch_errors.rs
-  - be:src/adapters/http/mcp/error_guidance.rs
-  - fe:src/shared/i18n/locales/en/common.json
-verified_be: dda945b4
-verified_fe: 80c74183
 ---
 # Errors in plain words
 

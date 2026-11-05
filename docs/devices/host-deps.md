@@ -3,14 +3,6 @@ id: devices/host-deps
 audience: both
 intents: [host deps, missing dependency, python missing, ffmpeg, wintun, screenshot service]
 tools: [get_host_deps]
-sources:
-  - agent:src/domain/status_host_deps.rs
-  - agent:src/app/host_dep_remediation_admit.rs
-  - agent:src/app/host_deps_facets.rs
-  - agent:docs/NEW-USER-WINDOWS-SETUP.md
-verified_be: 92a0a9c1
-verified_fe: a93e3f30
-verified_agent: 2ca0430
 ---
 # Host Deps shows something missing
 

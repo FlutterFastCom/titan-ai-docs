@@ -4,11 +4,6 @@ audience: author
 intents: [save accounts, add descriptions, create post, resource types]
 tools: [list_resource_types, get_resource_type, get_resource_type_version, list_resources, write_resources, create_wifi]
 error_codes: [bulk_conflict, resource_timeout]
-sources:
-  - be:src/application/resources/records.rs
-  - be:src/adapters/http/resources/batch_dto.rs
-  - be:docs/business/features/shipped/F-RESOURCES.md
-verified_be: 63de62c4
 ---
 # Step 1 — the content the strategy will use
 

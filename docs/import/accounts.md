@@ -3,11 +3,6 @@ id: import/accounts
 audience: both
 intents: [import accounts, add tiktok accounts, add instagram accounts, account list]
 tools: [list_resource_types, get_resource_type, list_resources, write_resources]
-sources:
-  - be:src/application/resources/records.rs
-  - be:src/application/resources/mailboxes.rs
-  - be:src/domain/accounts.rs
-verified_be: 63de62c4
 ---
 # Import social accounts
 

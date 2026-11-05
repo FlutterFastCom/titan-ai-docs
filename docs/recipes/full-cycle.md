@@ -3,9 +3,6 @@ id: recipes/full-cycle
 audience: author
 intents: [full cycle, reset vpn login post cleanup, complete automation, fresh device each time]
 tools: [create_strategy, save_definition, create_release]
-sources:
-  - conductor:missions/2026-10-18-tiktok-upload-native-photos-step-gets-no-ordered/QUEUE.md
-verified_conductor: 732df11a
 ---
 # Recipe — the full cycle   (PROVEN end to end: 2 green runs, 2026-10-24)
 

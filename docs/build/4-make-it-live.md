@@ -4,11 +4,6 @@ audience: author
 intents: [publish, release, make it live, share strategy, make public]
 tools: [create_release, list_releases, get_release, set_reusable, add_shares, remove_shares, list_shares, publish_strategy, unpublish_strategy, withdraw_strategy_release, restore_strategy_release]
 error_codes: [invalid_share_recipients, share_recipient_not_found]
-sources:
-  - be:src/adapters/http/mcp/presentation.rs
-  - be:docs/business/features/shipped/F-STRATEGY-AUTHORING.md
-  - be:src/adapters/http/strategies/error_response.rs
-verified_be: 98be5af0
 ---
 # Step 4 — make the saved steps live
 

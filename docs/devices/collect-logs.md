@@ -3,13 +3,6 @@ id: devices/collect-logs
 audience: both
 intents: [send logs, collect logs, diagnostics, support, escalate]
 tools: [get_host_deps]
-sources:
-  - agent:src/infra/logging.rs
-  - agent:src/infra/credential_store.rs
-  - agent:docs/HANDOFF-COLLECT-AGENT-LOGS.md
-verified_be: dda945b4
-verified_fe: 80c74183
-verified_agent: 1814365
 ---
 # Collect the PC Agent logs (when the steps did not help)
 

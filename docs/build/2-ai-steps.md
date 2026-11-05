@@ -4,11 +4,6 @@ audience: author
 intents: [ai step, prompt, tool set, what can the phone do]
 tools: [list_tools, get_tool, list_tool_sets, get_tool_set, get_tool_set_version, create_tool_set, get_prompt_part_lookups, create_prompt_part, create_prompt_part_version, create_prompt_part_preset, get_prompt_part_preset, list_prompt_part_presets]
 error_codes: [preset_catalog_conflict]
-sources:
-  - be:src/adapters/http/mcp/presentation.rs
-  - be:src/domain/tools/registry.rs
-  - be:docs/business/features/shipped/F-PRODUCT-CATALOG.md
-verified_be: 98be5af0
 ---
 # Step 2 — the AI steps (what each step tells the phone-driving AI)
 

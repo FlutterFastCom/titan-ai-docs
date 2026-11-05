@@ -3,10 +3,6 @@ id: goals/post-content
 audience: both
 intents: [post photos, upload video, publish on tiktok, post my content, carousel]
 tools: [list_user_strategies, get_media_library, list_resources, write_resources]
-sources:
-  - be:src/application/tools/photos_share.rs
-  - be:src/application/resources/records.rs
-verified_be: 63de62c4
 ---
 # The user wants to post content
 

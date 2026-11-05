@@ -3,14 +3,6 @@ id: devices/offline-or-flapping
 audience: both
 intents: [phone offline, keeps disconnecting, flapping, agent offline, stale]
 tools: [get_host_deps, list_devices, device_detail]
-sources:
-  - be:src/application/agents/pairing.rs
-  - agent:docs/AI-CLIENT-TRIAGE.md
-  - agent:src/app/device_status_discovery_attempt.rs
-  - agent:src/infra/instance_lock.rs
-verified_be: dda945b4
-verified_fe: 80c74183
-verified_agent: 1814365
 ---
 # Phones show offline, stale, or keep dropping
 

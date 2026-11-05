@@ -4,11 +4,6 @@ audience: author
 intents: [strategy steps, save strategy, loop, repeat, sub-strategy, call another strategy]
 tools: [create_strategy, get_definition, save_definition, get_strategy_overview]
 error_codes: [strategy_version_conflict, invalid_strategy_definition, invalid_strategy_input, preset_version_not_found, strategy_dependency_not_found, strategy_not_reusable, payload_too_large]
-sources:
-  - be:src/adapters/http/strategies/representations_definition.rs
-  - be:src/application/strategies/definition.rs
-  - be:src/adapters/http/auth_api_keys_catalog.rs
-verified_be: 98be5af0
 ---
 # Step 3 — create the strategy and save its steps
 

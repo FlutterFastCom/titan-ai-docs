@@ -3,11 +3,6 @@ id: build/7-improve-it
 audience: author
 intents: [improve strategy, fix strategy, change a step, new version, iterate]
 tools: [create_prompt_part_version, create_tool_set_version, create_prompt_part_preset_version, get_definition, save_definition, create_release, create_strategy_preset, put_preset_inputs, archive_strategy_preset]
-sources:
-  - be:src/adapters/http/mcp/presentation.rs
-  - be:src/application/strategy_presets/save_plan.rs
-  - be:src/application/strategy_presets/run_inputs.rs
-verified_be: 98be5af0
 ---
 # Step 7 — make it better
 

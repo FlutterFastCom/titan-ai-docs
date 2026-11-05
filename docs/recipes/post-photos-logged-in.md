@@ -3,12 +3,6 @@ id: recipes/post-photos-logged-in
 audience: author
 intents: [post photos, tiktok carousel, upload photos tiktok, publish post]
 tools: [get_media_library, write_resources, create_strategy, save_definition, create_release]
-sources:
-  - conductor:missions/2026-10-18-tiktok-upload-native-photos-step-gets-no-ordered/QUEUE.md
-  - be:src/application/tools/photos_share.rs
-  - be:src/domain/tools/registry.rs
-verified_be: dda945b4
-verified_conductor: 732df11a
 ---
 # Recipe — post a photo carousel from an account already logged in   (PROVEN)
 

@@ -3,10 +3,6 @@ id: recipes/many-accounts
 audience: author
 intents: [many accounts, rotate accounts, each account posts, campaign, all my accounts]
 tools: [preview_queue, create_and_start_queue]
-sources:
-  - be:src/application/run_execution/queue/generator.rs
-  - be:src/application/run_execution/queue/contracts.rs
-verified_be: 92a0a9c1
 ---
 # Recipe — post from many accounts   (PROVEN per run: the full cycle ran green on 2 different accounts, 2026-10-24; a long batch has no recorded green yet)
 

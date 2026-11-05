@@ -3,13 +3,6 @@ id: devices/index
 audience: both
 intents: [phone problem, device not working, phone offline, connection problem, device not ready]
 tools: [list_devices, device_detail, get_device_summary, get_host_deps, get_device_screen]
-sources:
-  - be:src/domain/device_status_policy.rs
-  - be:src/domain/agents.rs
-  - fe:src/shared/i18n/locales/en/devices.json
-verified_be: dda945b4
-verified_fe: 80c74183
-verified_agent: 1814365
 ---
 # Phone problems — find the right page
 

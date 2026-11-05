@@ -3,9 +3,6 @@ id: recipes/index
 audience: author
 intents: [which strategy, best strategy, recommend, what design, propose strategy]
 tools: [list_tools]
-sources:
-  - be:src/application/strategies/definition.rs
-verified_be: 92a0a9c1
 ---
 # Strategy recipes — pick the closest, never invent
 

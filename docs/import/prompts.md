@@ -3,10 +3,6 @@ id: import/prompts
 audience: both
 intents: [import prompts, my prompt, ai prompt text, prompt list]
 tools: [list_resource_types, get_resource_type, write_resources]
-sources:
-  - be:src/application/resources/records.rs
-  - be:src/application/user_prompts/contract.rs
-verified_be: 63de62c4
 ---
 # Import the user's own AI prompts
 

@@ -3,10 +3,6 @@ id: import/descriptions
 audience: both
 intents: [import descriptions, captions, bios, texts, list of texts]
 tools: [list_resource_types, get_resource_type, write_resources]
-sources:
-  - be:src/application/resources/records.rs
-  - be:src/domain/descriptions.rs
-verified_be: 63de62c4
 ---
 # Import descriptions (captions, bios, any short texts)
 

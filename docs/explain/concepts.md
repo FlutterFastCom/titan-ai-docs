@@ -3,11 +3,6 @@ id: explain/concepts
 audience: both
 intents: [what is, what does it mean, explain, how does titan work]
 tools: [list_resource_types, write_resources, create_strategy, save_definition, create_release, create_strategy_preset, create_run, play_run, preview_queue, create_and_start_queue, get_device_screen, device_action]
-sources:
-  - be:src/adapters/http/mcp/presentation.rs
-  - be:src/application/resources/records.rs
-  - be:docs/business/features/shipped/F-STRATEGY-AUTHORING.md
-verified_be: 63de62c4
 ---
 # How Titan fits together (for you; explain only the plain column to the user)
 

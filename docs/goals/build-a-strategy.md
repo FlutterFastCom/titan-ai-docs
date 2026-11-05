@@ -4,9 +4,6 @@ audience: author
 intents: [create strategy, build automation, make my phone do, new strategy, improve strategy]
 tools: [list_user_strategies, create_strategy]
 error_codes: [strategy_authoring_disabled]
-sources:
-  - be:src/adapters/http/mcp/presentation.rs
-verified_be: 98be5af0
 ---
 # The user wants a new strategy
 

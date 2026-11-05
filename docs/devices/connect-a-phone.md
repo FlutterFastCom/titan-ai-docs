@@ -3,15 +3,6 @@ id: devices/connect-a-phone
 audience: both
 intents: [connect a new phone, add device, set up phone, install agent, pair]
 tools: [list_devices, device_detail, get_host_deps, get_device_summary]
-sources:
-  - agent:scripts/packaging/installer/TitanAgent.iss
-  - agent:docs/TRIAGE-DEVICE-NOT-DETECTED.md
-  - fe:src/shared/i18n/locales/en/common.json
-  - fe:src/shared/i18n/locales/en/devices.json
-  - agent:ui/src/main.jsx
-verified_be: dda945b4
-verified_fe: 80c74183
-verified_agent: 1814365
 ---
 # Connect a new iPhone
 

@@ -3,12 +3,6 @@ id: devices/phone-locked
 audience: both
 intents: [phone locked, screen locked, asleep, after reboot, passcode]
 tools: [device_detail, get_device_screen]
-sources:
-  - agent:src/domain/device_facet_resolver.rs
-  - fe:src/shared/i18n/locales/en/devices.json
-verified_be: dda945b4
-verified_fe: 80c74183
-verified_agent: 1814365
 ---
 # The phone screen is locked or asleep
 

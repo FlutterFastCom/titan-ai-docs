@@ -3,13 +3,6 @@ id: explain/settings-and-navigation
 audience: both
 intents: [where is, how do I find, change language, create api key, settings, menu, navigation, app version]
 tools: []
-sources:
-  - fe:src/pages/dashboard/DashboardPage.tsx
-  - fe:src/widgets/AppSidebar/libs/constants/nav-items.constants.ts
-  - fe:src/shared/i18n/locales/en/common.json
-  - fe:src/shared/i18n/locales/ru/common.json
-  - fe:src/shared/i18n/libs/constants/languages.constants.ts
-verified_fe: 80c74183
 ---
 # Settings and where things are in the Titan web app
 

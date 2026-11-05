@@ -3,14 +3,6 @@ id: devices/phone-not-detected
 audience: both
 intents: [phone not showing, phone not found, not detected, missing phone, usb]
 tools: [get_host_deps, list_devices, device_detail]
-sources:
-  - agent:docs/TRIAGE-DEVICE-NOT-DETECTED.md
-  - agent:src/app/usb_disconnect_reconciler.rs
-  - agent:src/infra/usbmux_listen.rs
-  - fe:src/shared/i18n/locales/en/devices.json
-verified_be: dda945b4
-verified_fe: 80c74183
-verified_agent: 1814365
 ---
 # The phone is not detected
 

@@ -3,14 +3,6 @@ id: devices/never-do
 audience: both
 intents: [unsafe, should I erase, factory reset, re-pair, reinstall everything]
 tools: [list_devices]
-sources:
-  - agent:docs/AI-CLIENT-TRIAGE.md
-  - agent:src/infra/credential_store.rs
-  - fe:src/shared/i18n/locales/en/devices.json
-  - be:src/application/agents/pairing.rs
-verified_be: dda945b4
-verified_fe: 80c74183
-verified_agent: 1814365
 ---
 # Never suggest these as a connection fix
 

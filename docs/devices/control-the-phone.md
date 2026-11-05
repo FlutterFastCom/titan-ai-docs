@@ -4,12 +4,6 @@ audience: both
 intents: [see the phone screen, what is on the phone, tap on the phone, phone stuck, run stuck, unstick the phone, press home, open app, close app, dismiss popup]
 tools: [get_device_screen, device_action, device_detail, list_devices, wait_seconds]
 error_codes: [device_command_rate_limited, device_busy]
-sources:
-  - be:src/adapters/http/mcp/presentation.rs
-  - be:src/adapters/http/auth_api_keys_catalog.rs
-  - be:src/application/commands/phone_control.rs
-  - be:src/domain/device_commands/phone_control.rs
-verified_be: 98be5af0
 ---
 # See the phone's screen and act on it
 

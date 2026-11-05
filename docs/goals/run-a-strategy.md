@@ -3,10 +3,6 @@ id: goals/run-a-strategy
 audience: consumer
 intents: [run strategy, start, run on my phone, use strategy, use shared strategy]
 tools: [list_user_strategies, list_releases, get_release_run_inputs, get_release_input_options, list_user_presets, create_strategy_preset, list_devices, list_adapter_options, create_run, play_run, get_user_run, wait_seconds, get_device_screen]
-sources:
-  - be:src/application/run_execution/create.rs
-  - be:src/adapters/http/mcp/presentation.rs
-verified_be: 98be5af0
 ---
 # Run a strategy (own, shared or public)
 

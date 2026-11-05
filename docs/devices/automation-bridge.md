@@ -3,14 +3,6 @@ id: devices/automation-bridge
 audience: both
 intents: [wda, automation bridge, wrong version, not signed, verification failed, cannot control phone]
 tools: [device_detail]
-sources:
-  - agent:src/app/wda_lifecycle_fsm.rs
-  - agent:src/app/wda_lifecycle_reinstall.rs
-  - agent:src/domain/wda_lifecycle_resolution.rs
-  - fe:src/shared/i18n/locales/en/devices.json
-verified_be: dda945b4
-verified_fe: 80c74183
-verified_agent: 1814365
 ---
 # The automation link (WDA) is not ready
 

@@ -3,15 +3,6 @@ id: devices/device-states
 audience: both
 intents: [what does ready mean, device status, stale, disconnected, blocked, fresh]
 tools: [get_device_summary, list_devices, device_detail]
-sources:
-  - be:src/domain/device_status_policy.rs
-  - be:src/domain/device_status_judgment.rs
-  - be:src/domain/agents.rs
-  - be:src/domain/facet_probe_state.rs
-  - be:src/domain/agent_status_issue_code.rs
-verified_be: dda945b4
-verified_fe: 80c74183
-verified_agent: 1814365
 ---
 # What a phone's status means (for you)
 
