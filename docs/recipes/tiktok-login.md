@@ -21,5 +21,9 @@ A saved account with an email login-code setup (`import/accounts.md`, "Login cod
 rule; the AI step carries `emailOtp` pointing at that rule (`build/3-steps.md`). The account's mailbox may need the
 user's consent for this release: `get_email_otp_consents` / `set_email_otp_consent` before the first run.
 
+## If a step stops on the app
+TikTok installed twice on the phone stops the opening step until one version is chosen; not installed stops it too
+(`devices/installed-apps.md`).
+
 ## Ask
 "Which account? Should Titan read the login code from that account's email inbox?"

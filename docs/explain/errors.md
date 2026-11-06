@@ -48,5 +48,11 @@ the code to the user; say the plain meaning and do the fix. Which tool returns w
 | `payload_too_large` | — | send fewer items per batch |
 | `user_proxy_dead` | "That proxy doesn't answer." | ask them to check it or pick another |
 
+## Phone, app and cause codes
+Phone `guidance` codes, step replies such as `device_timeout`, `device_rejected`, `vision_unavailable`,
+`app_catalog_unavailable`, and the closed failure causes on a failed phone action are in
+`explain/device-and-app-codes.md`. App problems (not installed, two versions installed): `devices/installed-apps.md`.
+What the PC Agent reported: `devices/agent-diagnostics.md`. A repeated `run_create_operation_conflict`: `build/5-run-it.md`.
+
 Anything not listed: read `message` and `issues`, explain plainly, and never retry the same request unchanged more than
 once. A code missing from `reference/error-codes.md` may mean these docs are out of date (see `CLAUDE.md`).

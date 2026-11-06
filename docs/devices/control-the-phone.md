@@ -2,8 +2,8 @@
 id: devices/control-the-phone
 audience: both
 intents: [see the phone screen, what is on the phone, tap on the phone, phone stuck, run stuck, unstick the phone, press home, open app, close app, dismiss popup]
-tools: [get_device_screen, device_action, device_detail, list_devices, wait_seconds]
-error_codes: [device_command_rate_limited, device_busy]
+tools: [get_device_screen, device_action, device_detail, list_devices, list_device_apps, wait_seconds]
+error_codes: [device_command_rate_limited, device_busy, device_command_rejected]
 ---
 # See the phone's screen and act on it
 
@@ -26,9 +26,13 @@ what the phone shows now.
 | `swipe_pct` | swipe from one point to another | `from_x_pct`, `from_y_pct`, `to_x_pct`, `to_y_pct`, optional `duration_ms` |
 | `scroll_pct` | scroll the content | `direction` (up/down/left/right), `distance_pct` (above 0, at most 0.8), optional `duration_ms` |
 | `press_home` | go to the Home Screen | — |
-| `launch_app` / `close_app` | open / close an app | `bundle_id` (e.g. `com.zhiliaoapp.musically` for TikTok) |
+| `launch_app` / `close_app` | open / close an app | `bundle_id`: the exact identifier from `list_device_apps` (TikTok can be installed under more than one: `devices/installed-apps.md`) |
 | `accept_alert` / `dismiss_alert` | answer the system popup on screen | — |
 | `type_text` | type into the field that has focus | `text` |
+`launch_app` first reads the phone's installed apps. If that exact app is absent the call is refused (HTTP 409
+`device_command_rejected`) with `diagnostic.cause` = `app_not_installed` at stage `inventory`, and nothing is sent. If the
+list cannot be read, the call fails with its own ordinary error (a timeout, an invalid result or an unavailable phone
+session), never read as "not installed". `close_app` sends what you give it.
 Points are fractions of the screen: 0,0 is top-left, 1,1 is bottom-right. Work them out from the screenshot's width
 and height. Durations are milliseconds.
 
@@ -46,7 +50,11 @@ and height. Durations are milliseconds.
    the time it says (`retryAfterSeconds`) with `wait_seconds`, then look again. `device_busy` means the phone is busy
    with another command and gives no wait time: wait a few seconds, take a new screenshot, then decide. A refused
    call (either code) was NOT sent, so sending it after that is not a repeat.
-5. **Not possible here:** a Back button (iPhones have none — tap the app's own back arrow), opening links or web
+5. **A refusal can carry a cause.** A failed action may include a `diagnostic` with a closed `cause` and `stage` (for
+   example the app is not installed, or the automation link did not answer). `admission` and `inventory` stages mean the
+   phone was not asked to do anything; `execution` and `verification` mean it may have done it, so look at a new
+   screenshot first. Meanings: `explain/device-and-app-codes.md`.
+6. **Not possible here:** a Back button (iPhones have none — tap the app's own back arrow), opening links or web
    addresses, installing or deleting apps, clearing app data, network reset, VPN, Wi-Fi passwords, erasing the phone.
    Don't promise these; strategies do the bigger jobs.
 

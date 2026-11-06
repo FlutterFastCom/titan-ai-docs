@@ -13,6 +13,8 @@ error_codes: [transcript_changed]
 - What the AI saw and did (only for strategies the user owns): `read_run_transcript` with the step attempt's chat ID,
   page with `nextCursor` until null; on `transcript_changed` start again without a cursor. A screenshot of a moment:
   `get_user_message_screenshot`.
+- A failed run answers with a safe diagnosis (`failureClass`, `lastStepFailure`, `lastCommandFailure`): read it first,
+  details in `goals/fix-a-failed-run.md`.
 - A green run is not proof every repetition worked (a loop is done when one pass succeeded) — check the passes.
 - Never repeat passwords, codes or account data you find in a transcript.
 

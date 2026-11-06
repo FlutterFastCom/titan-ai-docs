@@ -14,7 +14,9 @@ stuck on the wrong screen, not for connection problems (`devices/control-the-pho
 ## First, always
 1. `get_device_summary`, then `list_devices` (small pages) and `device_detail` for the phone in question. Device tools
    take the phone's UDID (`deviceId`), not the numeric `rowId`.
-2. Check freshness before anything else: an old snapshot is not the phone's current state (`devices/device-states.md`).
+2. Check freshness before anything else: an old snapshot is not the phone's current state. A phone whose status says
+   `lastKnown` is shown as not ready and its values are the last ones heard (`devices/device-states.md`). Read the
+   phone's `guidance` list too: it names the one next step.
 3. `get_host_deps` — is the PC side healthy?
 
 ## Then pick the page
@@ -31,6 +33,8 @@ stuck on the wrong screen, not for connection problems (`devices/control-the-pho
 | the PC Agent is offline or needs an update | `devices/agent-update.md` |
 | Host Deps shows something missing | `devices/host-deps.md` |
 | still broken after the page's steps | `devices/collect-logs.md` |
+| a phone action or run failed and you need the cause | `devices/agent-diagnostics.md`, `explain/device-and-app-codes.md` |
+| an app is missing, or two versions of an app are installed | `devices/installed-apps.md` |
 | before suggesting anything unusual | `devices/never-do.md` |
 
 ## How to talk about it

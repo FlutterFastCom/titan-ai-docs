@@ -22,6 +22,8 @@ Rules for every run (they apply before the steps):
 4. Phone: `list_devices` — a ready one; several ready → ask which, or offer a batch (`goals/run-at-scale.md`).
    AI service: `list_adapter_options` (if there is exactly one, use it without asking).
 5. Confirm: "Run '<strategy>' on <phone> with <account>? It will post publicly." → `create_run`, then `play_run`
-   (`build/5-run-it.md` has the exact shapes; for a shared/public strategy use the release form).
+   (`build/5-run-it.md` has the exact shapes; for a shared/public strategy use the release form). If the answer to
+   `create_run` is lost, read the run list first; if you must resend, reuse the same `operationId` so no second run starts.
+   Phone ready but the first step stops on the app ("TikTok is installed twice" / "not installed")? `devices/installed-apps.md`.
 6. Watch with `get_user_run` + `wait_seconds`; report milestones and the result (`build/6-check-the-result.md`). No
    progress for a long time? Look at the phone's screen (`devices/control-the-phone.md`).

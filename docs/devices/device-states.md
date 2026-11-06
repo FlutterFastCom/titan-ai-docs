@@ -13,6 +13,13 @@ tools: [get_device_summary, list_devices, device_detail]
 | stale | the agent is connected but its report is old | don't trust the old values; see `offline-or-flapping.md` |
 | disconnected | no live agent connection | the agent is closed or offline; it does NOT mean the phone was unplugged |
 | missing | never reported | the agent has not seen it yet |
+Two fields on a phone's status say the same thing in numbers: `evidenceAgeMs` is how old Titan's latest report is
+(null when it never got one) and `lastKnown` is true for any old report that is still shown (stale or disconnected),
+false for fresh and for missing. A phone with `lastKnown: true` is shown as not ready whatever its old values say, and
+the parts below are what the agent last reported, not what the phone is doing now. Never call such a phone connected or
+ready; tell the user how old the evidence is ("last heard from it 20 minutes ago") and fix the agent side first
+(`offline-or-flapping.md`). Titan itself refuses phone commands on last-known evidence: do not act on the phone until
+`lastKnown` is false and readiness is ready.
 Summary counts: `ready` = fresh AND ready; `blocked` = every phone that is not ready (stale and disconnected included);
 `unknown` currently never increments — zero unknown proves nothing.
 
@@ -39,6 +46,13 @@ Summary counts: `ready` = fresh AND ready; `blocked` = every phone that is not r
 `observability_lost` / `presence_source_down` → Titan lost sight of it; this does not mean the phone is gone ·
 `auth_missing` / `auth_invalid` → the PC Agent's sign-in is the problem; do NOT tell the user to re-pair before checking
 `agent-update.md`.
+
+## What to do next (`guidance` on the phone)
+`device_detail` and `list_devices` carry a short `guidance` list: at most one action per problem, in this order:
+no automation build assigned → status never received → status old → agent disconnected → then, for a fresh report,
+USB, Trust, screen asleep, automatic recovery, or "cause unknown". Missing, old and disconnected stop the list there.
+Each entry has a code, an action (`wait`, `check_phone_usb`, `reconnect_agent`, `ask_administrator`) and a sentence.
+Meanings and who can fix each: `explain/device-and-app-codes.md`.
 
 ## Hints on each part (`presentation`, when the PC Agent sends one)
 `ok` → fine · `not_checked`, `checking`, `recovering`, `problem_auto` → Titan is on it: wait and look again ·

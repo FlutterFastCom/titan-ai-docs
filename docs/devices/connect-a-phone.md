@@ -11,6 +11,8 @@ You can only watch progress. The user does every step on their PC and phone. Giv
 ## 1. Install the Titan PC Agent (user)
 - **Windows:** "Run the Titan installer you were given and approve the administrator prompt. Then open **Titan PC
   Agent** from the Start menu." (Windows 10 or newer, 64-bit. The agent does not start by itself after install.)
+  If the installer stops with a message about the "tunnel diagnostics folder", nothing was installed: the person
+  who administers that PC must fix the permissions of `C:\ProgramData\Titan`, then run the installer again.
   Windows also needs **Apple Mobile Device Support**; if Host Deps reports it missing: "Open PowerShell and run
   `winget install --id Apple.AppleMobileDeviceSupport --accept-package-agreements --accept-source-agreements`."
 - **Mac:** "Run the Titan `.pkg` installer you were given, then open the Titan app from Applications." (Apple silicon,

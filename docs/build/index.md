@@ -22,6 +22,9 @@ Before any of this, run the interview in `goals/build-a-strategy.md` and pick a 
 | 7 | `build/7-improve-it.md` | a better version, released, with new run settings |
 
 Rules for the whole flow:
+- A tool's `body` is a JSON object. JSON text that encodes one object is also accepted; anything else (a number, a list,
+  broken or duplicate-key text) is refused at `body` and nothing is sent. Only `path`, `query`, `body` and
+  `idempotencyKey` exist at the top level of a call.
 - Copy every ID from a tool response; never build one from a name.
 - Pins never move by themselves: an AI step uses an exact composition version, a sub-strategy call uses an exact
   version, run settings use an exact release.
