@@ -52,8 +52,8 @@ one of:
 - { action: "delete"; expectedRevision: string (length 0..19); resourceId: string (length 36..36) }
 
 ## BudgetsBody
-- `maxDurationMs`: integer (0..9223372036854775807)
-- `maxLlmTurns`: integer (0..2147483647)
+- `maxDurationMs`: integer (1..2147483647)
+- `maxLlmTurns`: integer (1..2147483647)
 
 ## BundlePartInput
 - `orderIndex`: integer (0..2147483647)
@@ -63,6 +63,7 @@ one of:
 ## ChatConfigAuthoredBody
 - `budgets`: BudgetsBody
 - `postcheck`: PostcheckBody
+- `schemaVersion` (optional): 2 | null
 - `vision`: VisionBody
 
 ## CreateReleasePresetRequest
