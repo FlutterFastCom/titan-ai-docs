@@ -25,12 +25,10 @@ points at a file by its machine and content hash.
 Type `post` (exact schema from `get_resource_type`):
 - `data.name` (required), `data.items` = ordered list, 1–9 items to be postable. Each item: `file`, `text` (overlay
   text or null), `stickers` ([] if none), `filter` (null if none).
-- `file` is built by you, not copied whole. It is EXACTLY this object, with these three members and nothing else:
-  `{"kind":"hostFile","machineFingerprint":"<the machine's machineFingerprint>","contentHash":"<the item's contentHash>"}`.
-  `kind` is always the literal `"hostFile"` — `get_media_library` has no `kind` field, and its `mediaType`
-  ("video"/"image") is NOT `kind`. Take `machineFingerprint` from the machine entry and `contentHash` from the item.
-  Do not add `name`, `path`, `mediaType` or any other library field: an extra or missing member is refused as
-  "Valid local file metadata".
+- `file` = the item's `fileReference` from `get_media_library`, copied exactly as returned. It is always
+  `{"kind":"hostFile","machineFingerprint":"…","contentHash":"…"}` — three members, nothing else. Never send the whole
+  library item, and never add `name`, `path`, `mediaType` or any other library field: an extra or missing member is
+  refused (the error names the exact shape). `mediaType` ("video"/"image") is NOT `kind`.
 - Optional: `description` (caption), `music`, `location`, `privacy`, `coverIndex`, `allowComments`, `saveToDevice`,
   `aigcLabel`.
 - One post = one carousel. Ask how files group: "One post with all 3 photos, or 3 separate posts?"
