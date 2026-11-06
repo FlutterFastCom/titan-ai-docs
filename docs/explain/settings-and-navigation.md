@@ -55,8 +55,9 @@ Say:
 2. "Give it a name you will recognise, then click **Create key**."
 3. "Copy the secret right away — it is shown only once."
 
-Facts to mention only when relevant: at most 5 keys per account; a key can read everything the account can, including
-saved Wi-Fi passwords, so keep it private; **Revoke** deletes a key at once and anything using it stops working.
+Facts to mention only when relevant: at most 5 keys per account; a key reaches only the actions published for keys (the
+MCP tools) — some account pages, such as the Settings page itself, answer a key with `api_key_route_forbidden` — but
+what it can read includes saved Wi-Fi passwords, so keep it private; **Revoke** deletes a key at once and anything using it stops working.
 Never ask the user to paste the key into the chat — it belongs in their AI tool's connection settings (see
 `SETUP.md`).
 

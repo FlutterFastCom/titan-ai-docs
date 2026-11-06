@@ -24,7 +24,8 @@ Before any of this, run the interview in `goals/build-a-strategy.md` and pick a 
 Rules for the whole flow:
 - A tool's `body` is a JSON object. JSON text that encodes one object is also accepted; anything else (a number, a list,
   broken or duplicate-key text) is refused at `body` and nothing is sent. Only `path`, `query`, `body` and
-  `idempotencyKey` exist at the top level of a call.
+  `idempotencyKey` exist at the top level of a Titan API tool call. One exception: `wait_seconds` takes exactly
+  `{"seconds": <1..30>}` — no `body` wrapper.
 - Copy every ID from a tool response; never build one from a name.
 - Pins never move by themselves: an AI step uses an exact composition version, a sub-strategy call uses an exact
   version, run settings use an exact release.

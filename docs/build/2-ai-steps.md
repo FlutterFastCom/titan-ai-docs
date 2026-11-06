@@ -41,5 +41,5 @@ sparseThreshold}, budgets:{maxLlmTurns, maxDurationMs}}, parts:[{promptPartVersi
 Keep its current version ID: that is the AI step's `promptVersionId`. On `preset_catalog_conflict`, re-read the
 composition and reconcile — never overwrite blindly.
 
-Every tool call takes only `path`, `query`, `body` and `idempotencyKey` at the top level; any other top-level field is
-refused.
+Every Titan API tool call takes only `path`, `query`, `body` and `idempotencyKey` at the top level; any other top-level
+field is refused. The one exception is `wait_seconds`, which takes exactly `{"seconds": <1..30>}` with no `body`.

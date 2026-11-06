@@ -44,7 +44,10 @@ Every other input of the whole strategy must be listed too, as `fixed` (same val
 **Each value** is one of:
 - typed text: `{ "kind": "manual", "value": "…" }`
 - a picked row (account, post …): `{ "kind": "entity", "rowId": 123 }`
-- a saved resource: `{ "kind": "resource", "typeId": "…", "schemaVersion": 1, "rowId": "…" }`, copied exactly from the option you read.
+- a saved resource: `{ "kind": "resource", "typeId": "…", "schemaVersion": 1, "rowId": "…" }`. Build it from two
+  reads — an option alone is NOT enough: `typeId` and `schemaVersion` come from that input in
+  `get_release_run_inputs` (its `typeId` / `schemaVersion`), and `rowId` comes from the chosen option of
+  `get_release_input_options` (an option is only `{rowId, label}`). Never send the option's `label`.
 
 Two runs of a strategy whose only input is a product description, across two phones:
 ```json
