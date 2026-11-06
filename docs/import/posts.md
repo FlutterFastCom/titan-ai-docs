@@ -23,9 +23,14 @@ points at a file by its machine and content hash.
 
 ## 2. Build the post
 Type `post` (exact schema from `get_resource_type`):
-- `data.name` (required), `data.items` = ordered list, 1–9 items to be postable. Each item: `file` = the media
-  reference copied from `get_media_library` (`kind`, `machineFingerprint`, `contentHash` — a file name alone is not
-  enough), `text` (overlay text or null), `stickers` ([] if none), `filter` (null if none).
+- `data.name` (required), `data.items` = ordered list, 1–9 items to be postable. Each item: `file`, `text` (overlay
+  text or null), `stickers` ([] if none), `filter` (null if none).
+- `file` is built by you, not copied whole. It is EXACTLY this object, with these three members and nothing else:
+  `{"kind":"hostFile","machineFingerprint":"<the machine's machineFingerprint>","contentHash":"<the item's contentHash>"}`.
+  `kind` is always the literal `"hostFile"` — `get_media_library` has no `kind` field, and its `mediaType`
+  ("video"/"image") is NOT `kind`. Take `machineFingerprint` from the machine entry and `contentHash` from the item.
+  Do not add `name`, `path`, `mediaType` or any other library field: an extra or missing member is refused as
+  "Valid local file metadata".
 - Optional: `description` (caption), `music`, `location`, `privacy`, `coverIndex`, `allowComments`, `saveToDevice`,
   `aigcLabel`.
 - One post = one carousel. Ask how files group: "One post with all 3 photos, or 3 separate posts?"
