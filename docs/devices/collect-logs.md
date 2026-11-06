@@ -15,6 +15,11 @@ budget, so a long or noisy history can push out the run you need; the current ru
 | Mac | `~/Library/Application Support/titan-agent/logs/runs` | "In Finder choose **Go → Go to Folder**, paste this path, and copy the `.log` files." |
 | Linux | `~/.local/share/titan-agent/logs/runs` | "Open this folder (show hidden files) and copy the `.log` files." |
 
+**Windows: the newest log is locked while the agent runs.** The file of the run in progress cannot be opened or copied
+until the Titan PC Agent stops. Ask for all the other `.log` files first. If the problem is in the current run, then:
+"Quit the Titan PC Agent, copy the newest `.log` file, then start the agent again." Do this only after
+the other files are copied — stopping the agent ends the current run.
+
 **Windows, when the phone connection (tunnel) is the problem:** the background tunnel service keeps its own protected log
 in a second folder, which any user can read: `C:\ProgramData\Titan\DeviceAgent\logs\tunneld`. Ask for those `.log` files
 too ("Press **Win+R**, paste this path, press Enter, and copy the files"). It records which step failed and why, never

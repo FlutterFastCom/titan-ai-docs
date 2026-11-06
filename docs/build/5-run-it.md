@@ -23,6 +23,8 @@ error_codes: [run_create_operation_conflict, run_inputs_missing, invalid_run_inp
   `create_run({body:{strategyId, releaseId, inputs, deviceUdid, llmAdapterId}})`.
 - Optional `operationId` on `create_run`: a fresh lowercase UUID you make up for ONE run intent. If the answer to a create
   is lost, send the SAME request with the SAME `operationId` and you get the original run back instead of a second run, for 24 hours; after that the same `operationId` counts as new.
+  This works only while the user's Titan access is active: once access has expired or been revoked, the retry is
+  refused with `access_not_granted` and no run id is returned.
   An identical request without one is also joined to the earlier run for about 2 minutes, or for as long as that run has not been started. The same `operationId` with a
   different request is refused (`run_create_operation_conflict`): use a new one for a genuinely new run. Make a new
   `operationId` for every deliberate extra run, or a second identical run will not be created.
