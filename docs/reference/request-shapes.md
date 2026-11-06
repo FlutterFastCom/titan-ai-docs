@@ -22,14 +22,14 @@ one of:
 - ArgScalar
 
 ## ArgInvocationCallRequest
-- `entities`: map<string, integer (1..any)>
+- `entities`: map<string, integer (1..9223372036854775807)>
 - `manual`: map<string, string>
 - `path`: string[] (1..16 items)
 - `resources` (optional): map<string, { rowId: string (uuid); schemaVersion: integer (1..4294967295); typeId: string (uuid) }>
 
 ## ArgInvocationRequest
 - `calls` (optional): ArgInvocationCallRequest[] (0..4096 items)
-- `entities` (optional): map<string, integer (1..any)>
+- `entities` (optional): map<string, integer (1..9223372036854775807)>
 - `manual` (optional): map<string, string>
 - `resources` (optional): map<string, { rowId: string (uuid); schemaVersion: integer (1..4294967295); typeId: string (uuid) }>
 
@@ -52,11 +52,11 @@ one of:
 - { action: "delete"; expectedRevision: string (length 0..19); resourceId: string (length 36..36) }
 
 ## BudgetsBody
-- `maxDurationMs`: integer (0..any)
-- `maxLlmTurns`: integer (0..any)
+- `maxDurationMs`: integer (0..9223372036854775807)
+- `maxLlmTurns`: integer (0..2147483647)
 
 ## BundlePartInput
-- `orderIndex`: integer (0..any)
+- `orderIndex`: integer (0..2147483647)
 - `partTypeSlug`: string (length 1..100)
 - `promptPartVersionId`: string (length 1..19)
 
@@ -71,6 +71,16 @@ one of:
 - `name`: string
 - `releaseId`: string
 
+## CreateRunSchema
+one of:
+- OwnedCreateRunSchema
+- ReleaseCreateRunSchema
+
+## CreateStrategyPresetRequest
+one of:
+- OwnerCreatePresetRequest
+- CreateReleasePresetRequest
+
 ## DefinitionId
 - string
 
@@ -82,15 +92,21 @@ one of:
 ## DefinitionNodeDto
 one of:
 - { defaultLoop?: DefinitionLoopDto; key?: string; kind: "group"; name: string; steps: DefinitionNodeDto[] }
-- { autoRetries: integer (0..any); bindings: map<string, ArgDefault>; defaultLoop?: DefinitionLoopDto; emailOtp?: EmailOtpStepDto; irreversible: boolean; key?: string; kind: "llm"; name: string; promptVersionId: DefinitionId; retryBackoffMs: (integer (0..any))[] }
+- { autoRetries: integer (0..2147483647); bindings: map<string, ArgDefault>; defaultLoop?: DefinitionLoopDto; emailOtp?: EmailOtpStepDto; irreversible: boolean; key?: string; kind: "llm"; name: string; promptVersionId: DefinitionId; retryBackoffMs: (integer (0..9223372036854775807))[] }
 - { bindings: map<string, ArgDefault>; defaultLoop?: DefinitionLoopDto; key?: string; kind: "call"; name: string; strategyId: DefinitionId; strategyVersionId: DefinitionId }
+
+## DraftDefaultRequest
+one of:
+- { kind: "argument"; path?: (string (length 1..128))[] (0..16 items); selector: string; value: null | DraftValueRequest }
+- { kind: "llmAdapter"; llmAdapterId: integer (1..9223372036854775807) }
+- { kind: "userProxy"; userProxyId: string | null (length 0..19) }
 
 ## DraftDriverRequest
 - `selector`: string (length 1..any)
 - `values`: DraftDriverValueRequest[] (1..1000 items)
 
 ## DraftDriverValueRequest
-- `assignedWorkerDeviceRowId` (optional): integer | null (1..any)
+- `assignedWorkerDeviceRowId` (optional): integer | null (1..9223372036854775807)
 - `value`: DraftValueRequest
 
 ## DraftItemAddRequest
@@ -132,7 +148,7 @@ one of:
 ## DraftValueRequest
 one of:
 - { kind: "manual"; value: string (length 1..any) }
-- { kind: "entity"; rowId: integer (1..any) }
+- { kind: "entity"; rowId: integer (1..9223372036854775807) }
 - { kind: "resource"; rowId: string (uuid); schemaVersion: integer (1..4294967295); typeId: string (uuid) }
 
 ## DriverEditValueRequest
@@ -198,12 +214,12 @@ one of:
 one of:
 - { kind: "manual"; value: ArgScalar }
 - { kind: "legacyEntity"; rowId: string }
-- { kind: "resource"; rowId: string (uuid); schemaVersion: integer (1..any); typeId: string (uuid) }
+- { kind: "resource"; rowId: string (uuid); schemaVersion: integer (1..2147483647); typeId: string (uuid) }
 
 ## LoopDelay
 one of:
-- integer (0..any)
-- (integer (0..any))[] (2..2 items)
+- integer (0..9223372036854775807)
+- (integer (0..9223372036854775807))[] (2..2 items)
 
 ## ManualPromptSignatureRequest
 - `label`: string (length 0..200)
@@ -218,11 +234,11 @@ one of:
 ## OwnedCreateRunSchema
 - `argInvocation`: ArgInvocationRequest
 - `deviceUdid`: string
-- `llmAdapterId`: integer
+- `llmAdapterId`: integer (-9223372036854775808..9223372036854775807)
 - `manualMode` (optional): boolean
 - `operationId` (optional): string | null (uuid)
-- `presetId`: integer
-- `wifiConfigId` (optional): integer | null
+- `presetId`: integer (-9223372036854775808..9223372036854775807)
+- `wifiConfigId` (optional): integer | null (-9223372036854775808..9223372036854775807)
 
 ## OwnerCreatePresetRequest
 - `authoringStatus` (optional): PresetAuthoringStatusSchema
@@ -255,7 +271,7 @@ one of:
 - "draft" | "shipped" | "abandoned"
 
 ## PresetPartInput
-- `orderIndex`: integer (0..any)
+- `orderIndex`: integer (0..2147483647)
 - `promptPartVersionId`: string (length 1..19)
 
 ## QueueArgRequest
@@ -265,13 +281,13 @@ one of:
 - { mode: "cycle"; path?: string[] (0..16 items); selector: string (length 1..64); values: QueueValueRequest[] (1..1000 items) }
 
 ## QueueDriverValueRequest
-- `assignedWorkerDeviceRowId` (optional): integer | null
+- `assignedWorkerDeviceRowId` (optional): integer | null (-9223372036854775808..9223372036854775807)
 - `value`: QueueValueRequest
 
 ## QueueValueRequest
 one of:
 - { kind: "manual"; value: string (length 1..any) }
-- { kind: "entity"; rowId: integer (1..any) }
+- { kind: "entity"; rowId: integer (1..9223372036854775807) }
 - { kind: "resource"; rowId: string (uuid); schemaVersion: integer (1..4294967295); typeId: string (uuid) }
 
 ## RecoveryBindingRequest
@@ -282,16 +298,16 @@ one of:
 ## ReleaseCreateRunSchema
 - `deviceUdid`: string
 - `inputs`: RunInputAssignmentRequest[]
-- `llmAdapterId`: integer
+- `llmAdapterId`: integer (-9223372036854775808..9223372036854775807)
 - `manualMode` (optional): boolean
 - `operationId` (optional): string | null (uuid)
 - `releaseId`: string
 - `strategyId`: string
-- `wifiConfigId` (optional): integer | null
+- `wifiConfigId` (optional): integer | null (-9223372036854775808..9223372036854775807)
 
 ## ResourceBinding
 - `fields`: ResourceFieldBinding[]
-- `schemaVersion`: integer (1..any)
+- `schemaVersion`: integer (1..2147483647)
 - `toolSelectors` (optional): string[]
 - `typeId`: string (uuid)
 
@@ -322,7 +338,7 @@ one of:
 one of:
 - { kind: "manual"; value: ArgScalar }
 - { kind: "legacyEntity"; rowId: string }
-- { kind: "resource"; rowId: string (uuid); schemaVersion: integer (1..any); typeId: string (uuid) }
+- { kind: "resource"; rowId: string (uuid); schemaVersion: integer (1..2147483647); typeId: string (uuid) }
 
 ## RunStepStatusFilter
 - "all" | "running" | "success" | "failed" | "skipped" | "aborted"
@@ -345,7 +361,7 @@ one of:
 
 ## VisionBody
 - `autoTrigger`: boolean
-- `sparseThreshold`: integer (0..any)
+- `sparseThreshold`: integer (0..2147483647)
 
 ## WifiSecuritySchema
 - "open" | "wpa2" | "wpa3"

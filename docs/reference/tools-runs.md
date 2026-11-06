@@ -13,7 +13,7 @@ audience: both
 
 ## create_run
 - does: Create a run without starting it; the response returns its runId. Caller rights and exact pins apply. A lost response has no keyed receipt: read your runs before retrying.
-- input: body CreateRunSchema {  }
+- input: body CreateRunSchema (exactly one of: OwnedCreateRunSchema | ReleaseCreateRunSchema — see request-shapes)
 - returns: CreateRunResponse
 - flags: changes data
 

@@ -118,7 +118,7 @@ audience: both
 
 ## set_queue_draft_default
 - does: Update argument defaults for an owned run queue draft.
-- input: path { queue_id: string } · body DraftDefaultRequest {  }
+- input: path { queue_id: string } · body DraftDefaultRequest (exactly one of: object | object | object — see request-shapes)
 - returns: DraftDefaultWriteResponse
 - flags: changes data · destructive: confirm with the user first
 - refusals: 400: run_queue_draft_invalid_request, run_queue_limit_exceeded · 401: auth_missing_token, auth_malformed_token, auth_invalid_token, auth_expired_token, auth_not_configured · 403: access_not_granted · 404: run_queue_not_found, adapter_not_found, user_proxy_not_found, resource_row_not_found · 409: run_queue_draft_changed, run_queue_not_draft, run_queue_draft_exclusive_default_forbidden, strategy_access_revoked, strategy_unavailable, resource_type_not_installed, resource_schema_version_mismatch, resource_row_revision_conflict · 410: run_queue_deleted · 413: payload_too_large · 422: run_queue_draft_incomplete, invalid_resource_binding, run_inputs_missing · 503: auth_profile_unavailable, run_queue_unavailable

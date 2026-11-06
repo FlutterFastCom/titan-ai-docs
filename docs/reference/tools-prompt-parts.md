@@ -43,7 +43,7 @@ audience: both
 
 ## archive_prompt_part
 - does: Destructive: archive prompt part. Caller rights and exact pins apply.
-- input: path { part_id: string } · body null | EmptyPromptPartRequest {  }
+- input: path { part_id: string } · body null | EmptyPromptPartRequest (exactly one of: null | EmptyPromptPartRequest — see request-shapes)
 - returns: PromptPartResponse
 - flags: changes data · destructive: confirm with the user first
 
@@ -55,7 +55,7 @@ audience: both
 
 ## unarchive_prompt_part
 - does: unarchive prompt part. Caller rights and exact pins apply.
-- input: path { part_id: string } · body null | EmptyPromptPartRequest {  }
+- input: path { part_id: string } · body null | EmptyPromptPartRequest (exactly one of: null | EmptyPromptPartRequest — see request-shapes)
 - returns: PromptPartResponse
 - flags: changes data
 
@@ -67,6 +67,6 @@ audience: both
 
 ## set_current_prompt_part_version
 - does: Destructive: set current prompt part version. Caller rights and exact pins apply.
-- input: path { part_id: string; version_number: string } · body null | EmptyPromptPartRequest {  }
+- input: path { part_id: string; version_number: string } · body null | EmptyPromptPartRequest (exactly one of: null | EmptyPromptPartRequest — see request-shapes)
 - returns: PromptPartWithVersionsResponse
 - flags: changes data · destructive: confirm with the user first

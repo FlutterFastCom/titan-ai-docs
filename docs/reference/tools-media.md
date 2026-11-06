@@ -12,7 +12,7 @@ audience: both
 
 
 ## get_media_library
-- does: Read your agent-observed media metadata and saved pins, grouped by machineFingerprint. No file bytes. Copy machineFingerprint/contentHash from this result. connected, snapshotState and reachability describe current evidence; unknown is not missing. Read a baseline before select_media_folder/rescan_media; unchanged cached root/items cannot confirm either action. Seek a changed root or newly observed supported contentHash absent from baseline using wait_seconds, at most 12 readbacks/120 seconds, then report unconfirmed and stop polling.
+- does: Read your agent-observed media metadata and saved pins, grouped by machineFingerprint. No file bytes. Copy each item's fileReference unchanged into a resource File member; do not submit the whole library item. connected, snapshotState and reachability describe current evidence; unknown is not missing. Read a baseline before select_media_folder/rescan_media; unchanged cached root/items cannot confirm either action. Seek a changed root or newly observed supported contentHash absent from baseline using wait_seconds, at most 12 readbacks/120 seconds, then report unconfirmed and stop polling.
 - input: none
 - returns: MediaLibraryResponse
 - flags: read-only

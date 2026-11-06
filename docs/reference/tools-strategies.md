@@ -139,7 +139,7 @@ audience: both
 
 ## create_strategy_preset
 - does: create strategy preset. Caller rights and exact pins apply.
-- input: body CreateStrategyPresetRequest {  }
+- input: body CreateStrategyPresetRequest (exactly one of: OwnerCreatePresetRequest | CreateReleasePresetRequest — see request-shapes)
 - returns: StrategyPresetResponse
 - flags: changes data
 
