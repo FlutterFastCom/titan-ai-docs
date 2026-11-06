@@ -24,7 +24,7 @@ audience: both
 - flags: changes data
 
 ## get_resource_type
-- does: Read an existing resource type current definition and immutable declarations by id as a granted caller, independently of legacy publishedAt. Definition access grants no row, secret or author-write authority.
+- does: Read an existing resource type current definition and immutable declarations by id as a granted caller, independently of legacy publishedAt. The detail includes writeGuidance, the supplemental write restrictions for that exact schema pin (input normalization, semantic admission and, for the reserved mailbox, secret patch semantics): copy the exact pin and follow writeGuidance before write_resources. Definition access grants no row, secret or author-write authority.
 - input: path { type_id: string }
 - returns: ResourceTypeDetailDto
 - flags: read-only
@@ -48,13 +48,13 @@ audience: both
 - flags: read-only
 
 ## write_resources
-- does: Destructive: atomically create, replace or delete 1 to 100 of your own resource rows (items[].action create|replace|delete); all items commit or none. Pre-allocate each create resourceId UUID once and reuse it in references, such as an account's otpSetup.mailboxId naming a mailbox created in the same batch. Replace and delete use expectedRevision decimal string CAS; replace may set accountStatus available|disabled. Refusals list one safe issue per failing item at /items/<index> in input order. The result has only index, action, resourceId and the new revision: no data or secrets, never echo credentials. Required idempotencyKey: mint one per logical batch; after an uncertain result or timeout retry the same key with the identical body (Idempotency-Replayed true is historical), then read resources for current state.
+- does: Destructive: atomically create, replace or delete 1 to 100 of your own resource rows (items[].action create|replace|delete); all items commit or none. Read get_resource_type for the exact schema pin and follow its writeGuidance first. A reserved mailbox replacement submits secrets as a patch (an omitted key keeps its stored value, null clears it, a string replaces it) and its values are never read back. Pre-allocate each create resourceId UUID once and reuse it in references, such as an account's otpSetup.mailboxId naming a mailbox created in the same batch. Replace and delete use expectedRevision decimal string CAS; replace may set accountStatus available|disabled. Refusals list one safe issue per failing item at /items/<index> in input order. The result has only index, action, resourceId and the new revision: no data or secrets, never echo credentials. Required idempotencyKey: mint one per logical batch; after an uncertain result or timeout retry the same key with the identical body (Idempotency-Replayed true is historical), then read resources for current state.
 - input: body BatchResourceRequest { items: BatchResourceItemRequest[] } · idempotencyKey (required)
 - returns: BatchResourceResponse
 - flags: changes data · destructive: confirm with the user first
 
 ## get_resource
-- does: Read your live row detail including decrypted secrets: never echo them in chat. Foreign or deleted rows are masked not found.
+- does: Read your live row detail. An ordinary row includes its decrypted secrets: never echo them in chat. A reserved mailbox row's secrets are always {} because its values are write-only: the existing presence flags (for example hasEmailPassword) only show whether a value is stored, and no read tool reveals a mailbox value. Foreign or deleted rows are masked not found.
 - input: path { resource_id: string }
 - returns: ResourceDetailDto
 - flags: read-only · returns a stored credential: never repeat it to anyone

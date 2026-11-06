@@ -9,7 +9,7 @@ audience: both
 > Generated from the Titan code — do not edit by hand. For the assistant only: never show tool names, arguments or codes to the user.
 
 
-178 tools in 22 groups.
+179 tools in 22 groups.
 
 
 | group | tools | file |
@@ -18,7 +18,7 @@ audience: both
 | ai-usage | 2 | tools-ai-usage.md |
 | bundle-catalog | 9 | tools-bundle-catalog.md |
 | device-media | 2 | tools-device-media.md |
-| devices | 8 | tools-devices.md |
+| devices | 9 | tools-devices.md |
 | host-deps | 1 | tools-host-deps.md |
 | llm-adapters | 2 | tools-llm-adapters.md |
 | media | 3 | tools-media.md |
@@ -37,4 +37,4 @@ audience: both
 | user-proxies | 5 | tools-user-proxies.md |
 | wifis | 5 | tools-wifis.md |
 
-Every nested type an input names (71) is spelled out in request-shapes.md.
+Every nested type an input names (68) is spelled out in request-shapes.md.

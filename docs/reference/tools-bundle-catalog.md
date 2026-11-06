@@ -37,13 +37,13 @@ audience: both
 
 ## archive_prompt_part_bundle
 - does: Destructive: archive prompt part bundle. Caller rights and exact pins apply.
-- input: path { bundle_id: string } · body null | EmptyBundleRequest (exactly one of: null | EmptyBundleRequest — see request-shapes)
+- input: path { bundle_id: string } · body EmptyBundleRequest {  }
 - returns: BundleResponse
 - flags: changes data · destructive: confirm with the user first
 
 ## unarchive_prompt_part_bundle
 - does: unarchive prompt part bundle. Caller rights and exact pins apply.
-- input: path { bundle_id: string } · body null | EmptyBundleRequest (exactly one of: null | EmptyBundleRequest — see request-shapes)
+- input: path { bundle_id: string } · body EmptyBundleRequest {  }
 - returns: BundleResponse
 - flags: changes data
 
@@ -55,7 +55,7 @@ audience: both
 
 ## set_current_prompt_part_bundle_version
 - does: Destructive: set current prompt part bundle version. Caller rights and exact pins apply.
-- input: path { bundle_id: string; version_number: string } · body null | EmptyBundleRequest (exactly one of: null | EmptyBundleRequest — see request-shapes)
+- input: path { bundle_id: string; version_number: string } · body EmptyBundleRequest {  }
 - returns: BundleWithVersionsResponse
 - flags: changes data · destructive: confirm with the user first
 

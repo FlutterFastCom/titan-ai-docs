@@ -12,7 +12,7 @@ audience: both
 
 
 ## create_run
-- does: Create a run without starting it; the response returns its runId. Caller rights and exact pins apply. A lost response has no keyed receipt: read your runs before retrying.
+- does: Create a run without starting it: create does not play, so call play_run explicitly. The response returns its runId. Caller rights and exact pins apply. A stable supplied operationId identifies the same request: a retry with it returns the original runId for 24 hours (receipt scoped to your owner and environment), a changed request under that operationId conflicts, and your rights and grant are rechecked on replay. Without operationId, an identical request recovers the original run for 120 seconds or while that run is still created. Receipts are bounded: never assume indefinite, cross-owner or unconditional replay, and do not use a fresh operationId to recover an uncertain request; read your runs first.
 - input: body CreateRunSchema (exactly one of: OwnedCreateRunSchema | ReleaseCreateRunSchema — see request-shapes)
 - returns: CreateRunResponse
 - flags: changes data

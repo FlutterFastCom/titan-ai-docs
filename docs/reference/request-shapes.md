@@ -190,15 +190,6 @@ one of:
 - `path`: string[]
 - `ruleRef`: EmailOtpRuleRefDto
 
-## EmptyBundleRequest
-- object
-
-## EmptyPresetRequest
-- object
-
-## EmptyPromptPartRequest
-- object
-
 ## InheritArg
 - `inherit`: string
 

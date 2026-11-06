@@ -34,6 +34,7 @@ Plain meanings and fixes live in docs/explain/errors.md. This table only says wh
 | chat_conflict |  |
 | device_not_found | create_empty_queue_draft (404), edit_queue_draft (404), clone_queue_as_draft (404), get_queue_draft (404), get_queue_draft_defaults (404), list_queue_draft_items (404), finalize_queue_draft (404), start_queue (404) |
 | device_trust_pending |  |
+| devices_unavailable | set_device_alias (503) |
 | host_dep_missing |  |
 | invalid_attempt_evidence |  |
 | invalid_leaf |  |

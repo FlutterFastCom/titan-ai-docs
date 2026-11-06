@@ -4,7 +4,7 @@ generated: true
 audience: both
 ---
 
-# Tools — devices (8)
+# Tools — devices (9)
 
 > Generated from the Titan code — do not edit by hand. For the assistant only: never show tool names, arguments or codes to the user.
 
@@ -59,3 +59,10 @@ audience: both
 - returns: DeviceAppChoiceResponse
 - flags: changes data
 - refusals: 503: app_catalog_unavailable
+
+## set_device_alias
+- does: Set or clear the display alias of one of your phones, as owner-asserted desired state, not an agent observation. Send body {alias}: a string, trimmed and otherwise kept exactly (case, emoji and Unicode preserved), at most 64 Unicode characters after trimming, with no control characters; null or a whitespace-only string clears it. device_id is the exact UDID, not numeric rowId. It touches nothing on the phone, emits no event and sends nothing to the agent; Forget retains the alias. Success returns {deviceId, alias} with the canonical stored alias, null when cleared. If the reply is lost or uncertain, read device_detail before deciding: repeating the identical value is state-idempotent, but this call is never retried automatically. A missing, foreign or deleted device is one device_not_found. Body at most 1024 bytes, no query. Every outcome, including refusals, carries Cache-Control: no-store.
+- input: path { device_id: string } · body SetDeviceAliasRequest { alias: string|null }
+- returns: SetDeviceAliasResponse
+- flags: changes data
+- refusals: 503: devices_unavailable

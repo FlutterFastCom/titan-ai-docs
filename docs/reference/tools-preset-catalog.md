@@ -43,7 +43,7 @@ audience: both
 
 ## archive_prompt_part_preset
 - does: Destructive: archive prompt part preset. Caller rights and exact pins apply.
-- input: path { preset_id: string } · body null | EmptyPresetRequest (exactly one of: null | EmptyPresetRequest — see request-shapes)
+- input: path { preset_id: string } · body EmptyPresetRequest {  }
 - returns: PresetResponse
 - flags: changes data · destructive: confirm with the user first
 
@@ -55,7 +55,7 @@ audience: both
 
 ## unarchive_prompt_part_preset
 - does: unarchive prompt part preset. Caller rights and exact pins apply.
-- input: path { preset_id: string } · body null | EmptyPresetRequest (exactly one of: null | EmptyPresetRequest — see request-shapes)
+- input: path { preset_id: string } · body EmptyPresetRequest {  }
 - returns: PresetResponse
 - flags: changes data
 
@@ -67,6 +67,6 @@ audience: both
 
 ## set_current_prompt_part_preset_version
 - does: Destructive: set current prompt part preset version. Caller rights and exact pins apply.
-- input: path { preset_id: string; version_number: string } · body null | EmptyPresetRequest (exactly one of: null | EmptyPresetRequest — see request-shapes)
+- input: path { preset_id: string; version_number: string } · body EmptyPresetRequest {  }
 - returns: PresetWithVersionsResponse
 - flags: changes data · destructive: confirm with the user first
