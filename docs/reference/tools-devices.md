@@ -4,7 +4,7 @@ generated: true
 audience: both
 ---
 
-# Tools — devices (6)
+# Tools — devices (8)
 
 > Generated from the Titan code — do not edit by hand. For the assistant only: never show tool names, arguments or codes to the user.
 
@@ -46,3 +46,16 @@ audience: both
 - input: path { device_id: string } · body PhoneDeviceActionRequest { action: PhoneDeviceActionWire }
 - returns: PhoneActionResponse
 - flags: changes data · destructive: confirm with the user first
+
+## list_device_apps
+- does: Read a FRESH complete inventory of the apps installed on your phone's current session: name, bundleId, version and source (the phone's application type, including system and re-signed apps), sorted by bundleId. device_id is the exact UDID, not numeric rowId. Use it to learn the exact bundleId before device_action launch_app/close_app, and to see which variants of an app are installed. observedAt is the backend receipt time of this read, not a device capture time. A failed, offline or oversized inventory is a typed refusal, never an empty list. Send no query and no body. It charges the shared per-user device-command budget once per request; never cached.
+- input: path { device_id: string }
+- returns: DeviceAppsResponse
+- flags: read-only
+
+## set_device_app_choice
+- does: Remember which approved bundle variant of a named app (for example TikTok) this phone should use, as desired state, when app_choice_required says several approved variants are installed. Send body {appName,bundleId}; bundleId must be an approved variant that a fresh inventory shows installed on this phone, otherwise app_choice_invalid or app_not_installed is returned (with appSelection candidates/suggestions as evidence only). It does not launch anything and gives no receipt that a later launch will use it. device_id is the exact UDID, not numeric rowId. It charges the shared per-user device-command budget once per request.
+- input: path { device_id: string } · body SetDeviceAppChoiceRequest { appName: string; bundleId: string }
+- returns: DeviceAppChoiceResponse
+- flags: changes data
+- refusals: 503: app_catalog_unavailable

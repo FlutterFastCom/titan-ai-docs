@@ -220,6 +220,7 @@ one of:
 - `deviceUdid`: string
 - `llmAdapterId`: integer
 - `manualMode` (optional): boolean
+- `operationId` (optional): string | null (uuid)
 - `presetId`: integer
 - `wifiConfigId` (optional): integer | null
 
@@ -283,6 +284,7 @@ one of:
 - `inputs`: RunInputAssignmentRequest[]
 - `llmAdapterId`: integer
 - `manualMode` (optional): boolean
+- `operationId` (optional): string | null (uuid)
 - `releaseId`: string
 - `strategyId`: string
 - `wifiConfigId` (optional): integer | null

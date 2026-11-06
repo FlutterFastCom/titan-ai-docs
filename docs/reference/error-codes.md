@@ -20,6 +20,7 @@ Plain meanings and fixes live in docs/explain/errors.md. This table only says wh
 | api_key_invalid | requeue_queue_item (401) |
 | api_key_route_forbidden | requeue_queue_item (403) |
 | api_key_unavailable | start_queue (503) |
+| app_catalog_unavailable | set_device_app_choice (503) |
 | auth_expired_token | delete_queue_drafts (401), create_empty_queue_draft (401), get_queue_draft_create_receipt (401), edit_queue_draft (401), get_queue_draft_edit_receipt (401), clone_queue_as_draft (401), get_queue_draft_clone_receipt (401), list_queue_draft_argument_options (401), list_queue_draft_driver_options (401), list_queue_draft_device_options (401), get_queue_draft (401), list_queue_draft_workers (401), … (25) |
 | auth_invalid |  |
 | auth_invalid_token | delete_queue_drafts (401), create_empty_queue_draft (401), get_queue_draft_create_receipt (401), edit_queue_draft (401), get_queue_draft_edit_receipt (401), clone_queue_as_draft (401), get_queue_draft_clone_receipt (401), list_queue_draft_argument_options (401), list_queue_draft_driver_options (401), list_queue_draft_device_options (401), get_queue_draft (401), list_queue_draft_workers (401), … (25) |
