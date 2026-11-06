@@ -48,6 +48,12 @@ the code to the user; say the plain meaning and do the fix. Which tool returns w
 | `payload_too_large` | — | send fewer items per batch |
 | `user_proxy_dead` | "That proxy doesn't answer." | ask them to check it or pick another |
 
+## More codes, by area
+Sign-in and keys: `explain/codes-auth.md` · setting up a batch: `explain/codes-batch-drafts.md` · a batch that exists:
+`explain/codes-batch-live.md` · email codes inside a run: `explain/codes-run-email.md` · text, photo picker, music and
+post inside a run: `explain/codes-run-text-media.md` · missing choices, tool slips, run-record faults:
+`explain/codes-run-tools.md`.
+
 ## Phone, app and cause codes
 Phone `guidance` codes, step replies such as `device_timeout`, `device_rejected`, `vision_unavailable`,
 `app_catalog_unavailable`, and the closed failure causes on a failed phone action are in
