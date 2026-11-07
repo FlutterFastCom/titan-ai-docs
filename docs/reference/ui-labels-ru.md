@@ -57,7 +57,6 @@ exactly as written. A label not listed here: describe where it is instead of tra
 | MCP API keys | MCP API-ключи |
 | My Runs | Мои запуски |
 | open | открыть |
-| Open | Открыт / Открыть |
 | PC Agent | ПК Агент |
 | PC Agent connection issue. | Проблема с подключением ПК Агента. |
 | PC Agent is ready. | ПК Агент готов. |
@@ -69,7 +68,6 @@ exactly as written. A label not listed here: describe where it is instead of tra
 | Queues | Очереди |
 | Re-scan | Пересканировать |
 | Re-verify | Перепроверить |
-| Rename | Переименовать |
 | Repair | Восстановить / Исправить |
 | Reset | Сбросить |
 | Resources | Ресурсы |
@@ -83,7 +81,6 @@ exactly as written. A label not listed here: describe where it is instead of tra
 | Sign in to view PC Agent status. | Войдите, чтобы видеть статус ПК Агента. |
 | Start | Запустить |
 | Strategies | Стратегии |
-| Support access | Доступ поддержки |
 | System | Система |
 | Technical details | Технические данные / Технические сведения |
 | Titan navigation | Навигация Titan |
