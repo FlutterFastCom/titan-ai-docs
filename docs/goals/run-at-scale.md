@@ -34,9 +34,9 @@ Every type is spelled out in `reference/request-shapes.md` (`QueueArgRequest`, `
 **Where the `selector` comes from:**
 - Your own strategy: `get_run_requirements` with `strategyPresetId` → `pickers[].selectorKey` (a picker) or `scalars[].name` (a typed value). Copy it exactly; a label is never a selector.
 - Someone else's shared strategy: `get_release_run_inputs` → each input's `queueArgument.selector` and `queueArgument.path`; `queueArgument.canBeDriver` says whether it can drive a batch (`canBeDraftDriver` for a draft). Pickable row ids come from `get_release_input_options`.
-- `path` is `[]` (or left out) for an input of the whole strategy.
+- `path` is `[]` (or left out) for an input of the whole strategy. A saved-resource input inside a called strategy can also show `path: []`, so never judge from `path` whether an input can drive — read `canBeDriver`.
 
-**Exactly ONE entry is the driver** (`mode: "driver"`): one run per value in its `values`. It must be an input of the whole strategy (`path: []`).
+**Exactly ONE entry is the driver** (`mode: "driver"`): one run per value in its `values`. It must be an input of the whole strategy (`canBeDriver` true).
 A batch with no driver is refused, even when every other input is filled.
 If the strategy has a single input (for example only a product description), that input IS the driver: list the same text once per run you want.
 Every other input of the whole strategy must be listed too, as `fixed` (same value for every run) or `cycle` (rotate through a list) — even an optional one.
@@ -80,6 +80,7 @@ One run per account, with the same caption on every run:
 ```
 
 A draft (`create_queue_draft`) takes `driver.selector` instead of `args`, and its driver must be a picked row or a saved resource, never typed text.
+Send only that input's `queueArgument.selector` as `driver.selector`, never a `path`. A saved resource inside a called strategy (`canBeDriver` false, `canBeDraftDriver` true) can drive a draft but not `create_and_start_queue`.
 For a typed-text driver, use `create_and_start_queue`.
 
 After a refusal, read the code in `explain/errors.md` and compare your body with these shapes.

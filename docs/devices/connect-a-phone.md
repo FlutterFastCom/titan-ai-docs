@@ -9,8 +9,15 @@ tools: [list_devices, device_detail, get_host_deps, get_device_summary]
 You can only watch progress. The user does every step on their PC and phone. Give one step, wait, check, then the next.
 
 ## 1. Install the Titan PC Agent (user)
-- **Windows:** "Run the Titan installer you were given and approve the administrator prompt. Then open **Titan PC
-  Agent** from the Start menu." (Windows 10 or newer, 64-bit. The agent does not start by itself after install.)
+- **Windows:** "Run the Titan installer you were given and approve the administrator prompt. On the last screen leave
+  **Launch Titan PC Agent now** ticked, or open **Titan PC Agent** from the Start menu." (Windows 10 or newer, 64-bit.)
+  The agent opens no black windows: it sits as a small Titan icon in the taskbar tray (it may be hidden behind the
+  **^** arrow). Double-click the icon to open the agent page; right-click it for **Open** and **Quit agent**. It also
+  starts by itself in the tray when the user signs in to Windows — the checkbox **Start PC Agent when I sign in to
+  Windows** on the agent page turns that off.
+  If an older Titan PC Agent is running, the installer stops it first. If it says it could not confirm the previous
+  agent is fully stopped, nothing was replaced: "Quit the agent from its tray icon (or restart Windows), then run the
+  installer again."
   If the installer stops with a message about the "tunnel diagnostics folder", nothing was installed: the person
   who administers that PC must fix the permissions of `C:\ProgramData\Titan`, then run the installer again.
   Windows also needs **Apple Mobile Device Support**; if Host Deps reports it missing: "Open PowerShell and run

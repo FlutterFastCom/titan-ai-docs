@@ -12,7 +12,8 @@ Otherwise ask for the values in plain words ("What should the profile descriptio
 
 ## Find the right type
 `list_resource_types` → pick the built-in type → `get_resource_type` (or `get_resource_type_version`) for its exact
-`typeId`, `schemaVersion` and schema. Always use the returned schema; the summary below is only orientation.
+`typeId`, `schemaVersion` and schema. Always use the returned schema and follow its `writeGuidance` (extra write rules
+the schema alone does not show — a row can match the schema and still be refused); the summary below is only orientation.
 
 | user's word | built-in type | required | notes |
 |---|---|---|---|

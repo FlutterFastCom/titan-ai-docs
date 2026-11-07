@@ -18,7 +18,7 @@ None of these settings can be changed through your tools. Tell the user exactly 
 | — | Dashboard | the home page: whether the PC Agent is connected, the phone counts (ready / pending / unknown), and the active batches |
 | Connection | PC Agent | connect the Titan PC Agent on their computer and see whether it is connected |
 | Connection | Host Deps | see whether the PC has everything the phone connection needs, and run the fixes offered there |
-| Connection | Devices | the list of iPhones and whether each is ready |
+| Connection | Devices | the list of iPhones and whether each is ready; open a phone and click **Rename** to give it a name they recognise |
 | Runs and Monitor | Queues | batches of runs across several phones |
 | Runs and Monitor | My Runs | every run, its progress and its result |
 | Runs and Monitor | Strategies | the strategies they own, that were shared with them, or that are public |
@@ -33,7 +33,7 @@ Administrators also see a Dev Tools group (Playground, LLM Templates). Never sen
 ## Settings page sections
 | section | contains |
 |---|---|
-| User | nickname (**Change nickname**), email, access status and until when access is granted; under **Technical details** the User ID (with a copy button) |
+| User | nickname (**Change nickname**), email, access status and until when access is granted; under **Technical details** the User ID (with a copy button); **Support access** — a checkbox that lets Titan support view their data to help with problems |
 | Invites | invite links for new people (each works once and expires after 7 days; an administrator sets how many) |
 | Sessions | the user's signed-in sessions |
 | MCP API keys | create or revoke the keys that connect an AI assistant like you (see below) |

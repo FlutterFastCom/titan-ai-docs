@@ -20,8 +20,9 @@ one batch. The user should only see: what you found, a short preview, and the re
    | network names + Wi-Fi passwords | Wi-Fi networks | `import/wifi-and-proxies.md` |
    | host + port (+ login) | proxies | `import/wifi-and-proxies.md` |
    Not sure? Ask one question: "Are these TikTok or Instagram accounts?"
-2. **Check before writing**: `list_resource_types` → `get_resource_type` for the exact schema; validate every row
-   against it; `list_resources` to spot rows that already exist (same platform + username for accounts).
+2. **Check before writing**: `list_resource_types` → `get_resource_type` for the exact schema and its `writeGuidance`
+   (extra write rules the schema alone does not show); validate every row against both; `list_resources` to spot rows
+   that already exist (same platform + username for accounts).
 3. **Show a plain preview** and ask once: "I found 40 TikTok accounts (38 new, 2 already saved — I'll skip those). 1 row
    has no password. Import the 38?" Show at most 3 example rows, never passwords.
 4. **Write**: `write_resources` — up to 100 items per batch, each batch with its own new `idempotencyKey`; every item

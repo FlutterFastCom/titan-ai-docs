@@ -34,7 +34,9 @@ what the phone shows now.
 list cannot be read, the call fails with its own ordinary error (a timeout, an invalid result or an unavailable phone
 session), never read as "not installed". `close_app` sends what you give it.
 Points are fractions of the screen: 0,0 is top-left, 1,1 is bottom-right. Work them out from the screenshot's width
-and height. Durations are milliseconds.
+and height. Durations are milliseconds, from 10 to 10000. A value out of range (or empty or too-long `text` /
+`bundle_id`) is refused with `invalid_phone_control_request` before anything is sent; its `issues` point at the exact
+field (for example `/action/x_pct`) and say the allowed range — fix that one value and send it once.
 
 ## The rules
 1. **Look first, every time.** Take a screenshot before the first action, and read the screenshot that comes back with

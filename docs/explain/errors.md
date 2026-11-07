@@ -24,7 +24,8 @@ the code to the user; say the plain meaning and do the fix. Which tool returns w
 ## Running
 | code | say | do |
 |---|---|---|
-| `run_inputs_missing`, `invalid_resource_binding` | "It still needs <the account / post / text>." | ask for it or pick it, then start again |
+| `run_inputs_missing` | "It still needs <the account / post / text>." | ask for it or pick it, then start again |
+| `invalid_resource_binding` | depends on the cause — the refusal does not say which | check in turn: a wrong pick (choose the user's own account / post of the right kind); an inbox Titan cannot use as saved (Gmail / Outlook / Yahoo with only a password — `import/accounts.md`); or the user's yes to reading login codes for this strategy is missing (`get_email_otp_consents` / `set_email_otp_consent`) |
 | `resource_row_not_found`, `resource_row_revision_conflict`, `resource_schema_version_mismatch` | "That <account> changed or was removed." | read it again and re-select |
 | `resource_in_use` | "That account is busy in another run." | wait, or use another account |
 | `device_not_ready`, `snapshot_stale`, `agent_disconnected` | "Your phone isn't ready right now." | `devices/index.md` |

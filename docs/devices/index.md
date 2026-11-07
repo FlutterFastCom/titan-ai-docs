@@ -2,7 +2,8 @@
 id: devices/index
 audience: both
 intents: [phone problem, device not working, phone offline, connection problem, device not ready]
-tools: [list_devices, device_detail, get_device_summary, get_host_deps, get_device_screen]
+tools: [list_devices, device_detail, get_device_summary, get_host_deps, get_device_screen, wait_seconds]
+error_codes: [devices_unavailable]
 ---
 # Phone problems — find the right page
 
@@ -18,6 +19,11 @@ stuck on the wrong screen, not for connection problems (`devices/control-the-pho
    `lastKnown` is shown as not ready and its values are the last ones heard (`devices/device-states.md`). Read the
    phone's `guidance` list too: it names the one next step.
 3. `get_host_deps` — is the PC side healthy?
+
+## If a phone tool refuses
+| code | meaning | you can | ask the user | only Titan |
+|---|---|---|---|---|
+| `devices_unavailable` | Titan could not complete the request because a part of Titan behind the phone tools, or one of its processing steps, failed — it can come back from reading phones (list, one phone, screen or screenshot), from renaming a phone, and from phone actions and commands. It is on Titan's side, not the phone or the PC, and may pass on its own | a READ (phones, screen): wait a little (`wait_seconds`) and read once more. Anything that CHANGES something (rename, phone action, command): never repeat it blindly — read the phone first. Send it again only when that read shows the change clearly did not happen; if you cannot tell, stop and tell the user it is unclear | nothing to do on the phone or PC. Reading: "Titan can't show your phones right now — I'll try again shortly." Changing: "Titan couldn't confirm that just now — let me check whether it happened." | still failing after a few minutes: only Titan support can fix it |
 
 ## Then pick the page
 | what you see | page |
