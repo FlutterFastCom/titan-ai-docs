@@ -20,8 +20,11 @@ You can only watch progress. The user does every step on their PC and phone. Giv
   installer again."
   If the installer stops with a message about the "tunnel diagnostics folder", nothing was installed: the person
   who administers that PC must fix the permissions of `C:\ProgramData\Titan`, then run the installer again.
-  Windows also needs **Apple Mobile Device Support**; if Host Deps reports it missing: "Open PowerShell and run
-  `winget install --id Apple.AppleMobileDeviceSupport --accept-package-agreements --accept-source-agreements`."
+  **Required on every Windows PC, once:** Windows cannot see an iPhone without **Apple Mobile Device Support**. A fresh
+  Windows has no such service and the Titan installer does not include it, so no phone ever appears until it is
+  installed. Ask for it right after the installer, before pairing: "Open PowerShell **as Administrator** and run
+  `winget install --id Apple.AppleMobileDeviceSupport --accept-package-agreements --accept-source-agreements`, then
+  `sc.exe start "Apple Mobile Device Service"`." Details and the check: `usb-service-windows.md`.
 - **Mac:** "Run the Titan `.pkg` installer you were given, then open the Titan app from Applications." (Apple silicon,
   macOS 11 or newer.)
 - **Linux:** "Ask whoever gave you Titan for the Linux install and start method." There is no confirmed self-service
