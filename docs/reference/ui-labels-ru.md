@@ -25,10 +25,13 @@ exactly as written. A label not listed here: describe where it is instead of tra
 | Back | Назад |
 | Change | Изменить |
 | Change nickname | Изменить никнейм |
+| Change password | Сменить пароль |
 | Check status | Проверить статус |
 | Clear search | Очистить поиск |
 | Close | Закрыть |
 | Confirm | Подтвердить |
+| Confirm email | Подтвердить email |
+| Confirm password | Подтвердите пароль |
 | Connect | Подключить |
 | Connect a phone | Подключить телефон |
 | Connection | Подключение |
@@ -39,9 +42,11 @@ exactly as written. A label not listed here: describe where it is instead of tra
 | Developer Mode | Режим разработчика |
 | Devices | Устройства |
 | Disconnected | Отключено / Отключён |
+| Email me a reset link | Отправить ссылку для сброса |
 | Encoder | Кодировщик |
 | Filter | Фильтр |
 | Forget phone | Забыть телефон |
+| Forgot password? | Забыли пароль? |
 | Get setup code | Получить код настройки |
 | Host dependencies are ready. | Зависимости хоста готовы. |
 | Host dependencies need attention. | Зависимости хоста требуют внимания. |
@@ -58,6 +63,7 @@ exactly as written. A label not listed here: describe where it is instead of tra
 | My Runs | Мои запуски |
 | open | открыть |
 | Open | Открыт / Открыть |
+| Password | Пароль |
 | PC Agent | ПК Агент |
 | PC Agent connection issue. | Проблема с подключением ПК Агента. |
 | PC Agent is ready. | ПК Агент готов. |
@@ -69,13 +75,19 @@ exactly as written. A label not listed here: describe where it is instead of tra
 | Queues | Очереди |
 | Re-scan | Пересканировать |
 | Re-verify | Перепроверить |
+| Register | Зарегистрироваться / Регистрация |
 | Rename | Переименовать |
 | Repair | Восстановить / Исправить |
+| Request a new link | Запросить новую ссылку |
 | Reset | Сбросить |
+| Reset password | Сброс пароля |
 | Resources | Ресурсы |
 | Retry | Повторить |
 | Revoke | Отозвать / Отозвать доступ |
 | Runs and Monitor | Запуски и мониторинг |
+| Send again | Отправить ещё раз |
+| Send reset link | Отправить ссылку / Отправить ссылку для сброса |
+| Send verification email | Отправить письмо для подтверждения |
 | Sessions | Сессии |
 | Settings | Настройки |
 | Settings and Setup | Настройки и подготовка |
