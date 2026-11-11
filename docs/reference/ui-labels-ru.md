@@ -23,6 +23,7 @@ exactly as written. A label not listed here: describe where it is instead of tra
 | Auto | Автоматически |
 | Available on this computer | Доступны на этом компьютере |
 | Back | Назад |
+| Billing | Оплата |
 | Change | Изменить |
 | Change nickname | Изменить никнейм |
 | Change password | Сменить пароль |
