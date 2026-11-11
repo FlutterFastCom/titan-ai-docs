@@ -59,6 +59,7 @@ exactly as written. A label not listed here: describe where it is instead of tra
 | Language | Язык |
 | LLM Templates | LLM шаблоны |
 | Log out | Выйти |
+| Mac | Mac |
 | MCP API keys | MCP API-ключи |
 | My Runs | Мои запуски |
 | open | открыть |
@@ -102,4 +103,5 @@ exactly as written. A label not listed here: describe where it is instead of tra
 | Trust | Доверие |
 | User | Пользователь |
 | WiFi | Wi‑Fi |
+| Windows | Windows |
 | You | Вы |
