@@ -15,46 +15,37 @@ exactly as written. A label not listed here: describe where it is instead of tra
 
 | English | Русский |
 |---|---|
+| Account settings | Настройки аккаунта |
 | Add device | Добавить устройство |
 | Admin Runs | Admin запуски |
-| AI Adapters | AI адаптеры |
-| Apple Mobile Device Service | Служба мобильных устройств Apple |
+| AI adapters | AI адаптеры |
+| AI step | Шаг ИИ |
+| Apple Mobile Device Service | Apple Mobile Device Service |
 | Apply | Применить |
-| Auto | Автоматически |
+| Auto | Авто |
 | Available on this computer | Доступны на этом компьютере |
 | Back | Назад |
 | Billing | Оплата |
+| Can’t check systems. | Системы не проверить. |
 | Change | Изменить |
 | Change nickname | Изменить никнейм |
-| Change password | Сменить пароль |
-| Check status | Проверить статус |
+| Checking systems. | Проверяем системы. |
 | Clear search | Очистить поиск |
 | Close | Закрыть |
+| Close Titan navigation | Закрыть · Навигация Titan |
 | Confirm | Подтвердить |
-| Confirm email | Подтвердить email |
-| Confirm password | Подтвердите пароль |
 | Connect | Подключить |
 | Connect a phone | Подключить телефон |
-| Connection | Подключение |
 | Copy | Копировать |
 | Create key | Создать ключ |
-| Dashboard | Панель |
-| Dev Tools | Инструменты разработки |
 | Developer Mode | Режим разработчика |
-| Devices | Устройства |
+| Devices | Телефоны |
 | Disconnected | Отключено / Отключён |
-| Email me a reset link | Отправить ссылку для сброса |
 | Encoder | Кодировщик |
 | Filter | Фильтр |
+| For developers | Для разработчиков |
 | Forget phone | Забыть телефон |
-| Forgot password? | Забыли пароль? |
-| Get setup code | Получить код настройки |
-| Host dependencies are ready. | Зависимости хоста готовы. |
-| Host dependencies need attention. | Зависимости хоста требуют внимания. |
-| Host dependency status is being updated. | Статус зависимостей хоста обновляется. |
-| Host dependency status is checking. | Статус зависимостей хоста проверяется. |
-| Host dependency status is unavailable. | Статус зависимостей хоста недоступен. |
-| Host Deps | Зависимости / Зависимости хоста |
+| Home | Главная |
 | Install | Установить |
 | Invites | Приглашения |
 | Language | Язык |
@@ -62,47 +53,50 @@ exactly as written. A label not listed here: describe where it is instead of tra
 | Log out | Выйти |
 | Mac | Mac |
 | MCP API keys | MCP API-ключи |
-| My Runs | Мои запуски |
+| My runs | Мои запуски |
 | open | открыть |
 | Open | Открыт / Открыть |
-| Password | Пароль |
+| Open Titan navigation | Навигация Titan: открыть |
 | PC Agent | ПК Агент |
 | PC Agent connection issue. | Проблема с подключением ПК Агента. |
+| PC Agent is offline. Systems can’t be checked. | ПК Агент не в сети. Системы не проверить. |
 | PC Agent is ready. | ПК Агент готов. |
 | PC Agent needs setup. | ПК Агент требует настройки. |
+| Phones | Телефоны |
 | Playground | Песочница |
 | Prepare | Подготовка |
 | Preparing PC Agent. | Подготовка ПК Агента. |
 | Proxies | Прокси |
 | Queues | Очереди |
-| Re-scan | Пересканировать |
-| Re-verify | Перепроверить |
-| Register | Зарегистрироваться / Регистрация |
+| Re-scan | Проверить |
 | Rename | Переименовать |
-| Repair | Восстановить / Исправить |
-| Request a new link | Запросить новую ссылку |
+| Repair | Исправить |
 | Reset | Сбросить |
-| Reset password | Сброс пароля |
 | Resources | Ресурсы |
 | Retry | Повторить |
 | Revoke | Отозвать / Отозвать доступ |
-| Runs and Monitor | Запуски и мониторинг |
-| Send again | Отправить ещё раз |
-| Send reset link | Отправить ссылку / Отправить ссылку для сброса |
-| Send verification email | Отправить письмо для подтверждения |
 | Sessions | Сессии |
 | Settings | Настройки |
-| Settings and Setup | Настройки и подготовка |
-| Sign in to view host dependency status. | Войдите, чтобы видеть статус зависимостей хоста. |
+| Setup | Настройка |
+| Sign in to see systems. | Войдите, чтобы увидеть системы. |
 | Sign in to view PC Agent status. | Войдите, чтобы видеть статус ПК Агента. |
-| Start | Запустить |
+| Skip to content | К содержимому |
+| Skip to form | К форме |
+| Start | Запустить / Начало / Начать |
 | Strategies | Стратегии |
 | Support access | Доступ поддержки |
 | System | Система |
-| Technical details | Технические данные / Технические сведения |
+| Systems | Системы |
+| Systems are ready. | Системы готовы. |
+| Systems can't be checked now. | Системы сейчас не проверить. |
+| Systems need attention. | Системы требуют внимания. |
+| Systems status may be out of date. Reconnecting. | Статус систем может быть устаревшим. Переподключаемся. |
+| Technical details | Технические данные |
 | Titan navigation | Навигация Titan |
 | Trust | Доверие |
+| Updating systems. | Обновляем системы. |
 | User | Пользователь |
-| WiFi | Wi‑Fi |
+| Wi-Fi | Wi-Fi |
 | Windows | Windows |
+| Work | Работа |
 | You | Вы |

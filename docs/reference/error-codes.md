@@ -47,6 +47,7 @@ Plain meanings and fixes live in docs/explain/errors.md. This table only says wh
 | irreversible_policy |  |
 | observability_lost |  |
 | payload_too_large | create_empty_queue_draft (413), edit_queue_draft (413), clone_queue_as_draft (413), add_queue_draft_workers (413), remove_queue_draft_workers (413), set_queue_draft_default (413), update_queue_draft_item_overrides (413), add_queue_draft_items (413), remove_queue_draft_items (413), finalize_queue_draft (413), cancel_queue_item (413), requeue_queue_item (413) |
+| phone_limit_exceeded |  |
 | phone_return_timeout |  |
 | presence_source_down |  |
 | presence_uncertain |  |

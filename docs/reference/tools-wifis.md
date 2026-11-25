@@ -13,7 +13,7 @@ audience: both
 
 ## list_wifis
 - does: List the owner's saved WiFi profiles.
-- input: query { page?: integer; size?: integer; orderBy?: string; orderDirection?: string }
+- input: query { page?: integer; size?: integer; orderBy?: string; orderDirection?: string; search?: string }
 - returns: PaginatedResponse_WifiSummaryResponse
 - flags: read-only
 
