@@ -29,11 +29,14 @@ exactly as written. A label not listed here: describe where it is instead of tra
 | Can’t check systems. | Системы не проверить. |
 | Change | Изменить |
 | Change nickname | Изменить никнейм |
+| Change password | Сменить пароль |
 | Checking systems. | Проверяем системы. |
 | Clear search | Очистить поиск |
 | Close | Закрыть |
 | Close Titan navigation | Закрыть · Навигация Titan |
 | Confirm | Подтвердить |
+| Confirm email | Подтвердить email |
+| Confirm password | Подтвердите пароль |
 | Connect | Подключить |
 | Connect a phone | Подключить телефон |
 | Copy | Копировать |
@@ -45,6 +48,7 @@ exactly as written. A label not listed here: describe where it is instead of tra
 | Filter | Фильтр |
 | For developers | Для разработчиков |
 | Forget phone | Забыть телефон |
+| Forgot password? | Забыли пароль? |
 | Home | Главная |
 | Install | Установить |
 | Invites | Приглашения |
@@ -57,6 +61,7 @@ exactly as written. A label not listed here: describe where it is instead of tra
 | open | открыть |
 | Open | Открыт / Открыть |
 | Open Titan navigation | Навигация Titan: открыть |
+| Password | Пароль |
 | PC Agent | ПК Агент |
 | PC Agent connection issue. | Проблема с подключением ПК Агента. |
 | PC Agent is offline. Systems can’t be checked. | ПК Агент не в сети. Системы не проверить. |
@@ -69,12 +74,18 @@ exactly as written. A label not listed here: describe where it is instead of tra
 | Proxies | Прокси |
 | Queues | Очереди |
 | Re-scan | Проверить |
+| Register | Зарегистрироваться / Регистрация |
 | Rename | Переименовать |
 | Repair | Исправить |
+| Request a new link | Запросить новую ссылку |
 | Reset | Сбросить |
+| Reset password | Сброс пароля / Сбросить пароль |
 | Resources | Ресурсы |
 | Retry | Повторить |
 | Revoke | Отозвать / Отозвать доступ |
+| Send again | Отправить ещё раз |
+| Send reset link | Отправить ссылку для сброса |
+| Send verification email | Отправить письмо для подтверждения |
 | Sessions | Сессии |
 | Settings | Настройки |
 | Setup | Настройка |
