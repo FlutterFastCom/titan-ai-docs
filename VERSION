@@ -1,3 +1,4 @@
-backend=0.59.2
-frontend=0.60.4
-agent=0.22.8
+docs=1.0.0
+backend=0.64.0
+frontend=0.64.3
+agent=0.23.0

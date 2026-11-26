@@ -18,10 +18,11 @@ exactly as written. A label not listed here: describe where it is instead of tra
 | Account settings | Настройки аккаунта |
 | Add device | Добавить устройство |
 | Admin Runs | Admin запуски |
-| AI adapters | AI адаптеры |
+| AI adapters | ИИ адаптеры |
 | AI step | Шаг ИИ |
 | Apple Mobile Device Service | Apple Mobile Device Service |
 | Apply | Применить |
+| Ask AI | Спросить ИИ |
 | Auto | Авто |
 | Available on this computer | Доступны на этом компьютере |
 | Back | Назад |
@@ -30,6 +31,7 @@ exactly as written. A label not listed here: describe where it is instead of tra
 | Change | Изменить |
 | Change nickname | Изменить никнейм |
 | Change password | Сменить пароль |
+| Check | Проверить |
 | Checking systems. | Проверяем системы. |
 | Clear search | Очистить поиск |
 | Close | Закрыть |
@@ -40,6 +42,7 @@ exactly as written. A label not listed here: describe where it is instead of tra
 | Connect | Подключить |
 | Connect a phone | Подключить телефон |
 | Copy | Копировать |
+| Copy prompt for AI | Скопировать запрос для ИИ |
 | Create key | Создать ключ |
 | Developer Mode | Режим разработчика |
 | Devices | Телефоны |
@@ -73,7 +76,6 @@ exactly as written. A label not listed here: describe where it is instead of tra
 | Preparing PC Agent. | Подготовка ПК Агента. |
 | Proxies | Прокси |
 | Queues | Очереди |
-| Re-scan | Проверить |
 | Register | Зарегистрироваться / Регистрация |
 | Rename | Переименовать |
 | Repair | Исправить |
