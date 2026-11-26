@@ -28,6 +28,7 @@ stuck on the wrong screen, not for connection problems (`devices/control-the-pho
 ## Then pick the page
 | what you see | page |
 |---|---|
+| the user pasted a phone or Systems prompt from Titan's **Ask AI** / **Спросить ИИ** or **Copy prompt for AI** / **Скопировать запрос для ИИ** button | `devices/pasted-ai-prompt.md` |
 | no phones at all, or the user wants to add one | `devices/connect-a-phone.md` |
 | the phone is not in the list, or USB shows detached/unknown | `devices/phone-not-detected.md` |
 | the phone is connected but stuck on a popup or the wrong app, or a run is stuck on the phone | `devices/control-the-phone.md` |
