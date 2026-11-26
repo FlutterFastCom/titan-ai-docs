@@ -1,6 +1,6 @@
 ---
 id: devices/pasted-ai-prompt
-audience: ai
+audience: both
 intents: [ask ai, спросить ии, copy prompt for ai, скопировать запрос для ии, pasted prompt, copied prompt, my iphone in titan has a problem, с моим iphone в titan проблема, why is the tunnel down, почему не работает туннель, why doesn't work on my computer, почему не работает на моём компьютере, problem codes, коды проблемы]
 tools: [device_detail, list_devices, get_host_deps]
 ---
